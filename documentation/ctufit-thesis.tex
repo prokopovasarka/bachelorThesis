@@ -55,10 +55,22 @@
 \ctufityear{2025} % replace with the year of your defence
 \ctufitdeclarationplace{Praze} % replace with the place where you sign the declaration
 \ctufitdeclarationdate{\today} % replace with the date of signature of the declaration
-\ctufitabstractCZE{Fill in the abstract of this thesis in Czech. Lorem ipsum dolor sit amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Suspendisse sagittis ultrices augue.}
-\ctufitabstractENG{Fill in the abstract of this thesis in English. Lorem ipsum dolor sit amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Suspendisse sagittis ultrices augue.}
-\ctufitkeywordsCZE{enter, comma, separated, list, of, keywords, in, CZECH}
-\ctufitkeywordsENG{enter, comma, separated, list, of, keywords, in, ENGLISH}
+\ctufitabstractCZE{Tato bakalářská práce se věnuje vývoji multiplatformní mobilní aplikace pro detekci barev a vizuální návrh barevných schémat s dodržením tradičních postupů softwarového inženýrství. Součástí práce je analýza teorie barev, vnímání barev spolu s představením známých barevných sad a popsáním tvorby barevných palet. Provedena je také rešerše existujících řešení a využití metod rozšířené reality.
+
+Na základě analýzy jsou sestaveny požadavky aplikace, dle nichž se zrealizoval návrh. Ten je doprovázen implementací aplikace a jejím testováním. Konec práce se věnuje zhodnocení výsledků a popisu možného rozvoje aplikace.
+
+Výstupem této práce je funkční mobilní aplikace umožňující rozpoznávat barvy a na jejich základě vytvářet barevné palety.}
+\ctufitabstractENG{This bachelor thesis focuses on the development of a multiplatform mobile application for colour detection and visual design of colour schemes following traditional software engineering principles. The thesis includes an analysis of colour theory, colour perception 
+along with an introduction of recognized colour sets and a description of the creation of
+colour palettes. A survey of existing solutions and the use of augmented reality methods is also presented.
+
+On the basis of the analysis, the application requirements are established, according to which the design is developed. This is followed by the implementation of the application and its testing.
+The end of the thesis is dedicated to the evaluation of the results and description of the possible development of the application.
+
+The output of this work is a functional mobile application that enables the recognition of
+colours and to create colour palettes based on the colours.}
+\ctufitkeywordsCZE{teorie barev, vnímání barev, mobilní aplikace, AR, extrakce barev, barevné palety}
+\ctufitkeywordsENG{colour theory, perception of colours, mobile application, AR, colour extraction, colour palettes}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % END FILL IN
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -119,7 +131,8 @@
 
 \thispagestyle{empty}\maketitle\thispagestyle{empty}\cleardoublepage % do not remove these four commands
 
-\includepdf[pages={1-}]{example-assignment-include.pdf} % replace this file with your thesis assignment generated from ProjectsFIT
+\includepdf[pages={1-}]{assignment.pdf} % replace this file with your thesis assignment generated from ProjectsFIT
+% TODO change font
 
 \imprintpage % do not remove this command
 \stopTOCentries
@@ -133,7 +146,7 @@
 % This is a place to thank people for helping you. It is common to thank your supervisor.
 %%%%%%%%%%%%%%%%%%%
 \begin{acknowledgmentpage}
-	Chtěl bych poděkovat především sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Suspendisse sagittis ultrices augue.
+	Chtěl bych poděkovat především 
 \end{acknowledgmentpage}
 %%%%%%%%%%%%%%%%%%%
 % ACKNOWLEDGMENT END
@@ -148,9 +161,14 @@
 % ENG: choose one of approved texts of the declaration. DO NOT CREATE YOUR OWN. Find the approved texts at https://courses.fit.cvut.cz/SFE/download/index.html#_documents (document Declaration for FT in English)
 % CZE/SLO: Vyberte jedno z fakultou schvalenych prohlaseni. NEVKLADEJTE VLASTNI TEXT. Schvalena prohlaseni najdete zde: https://courses.fit.cvut.cz/SZZ/dokumenty/index.html#_dokumenty (prohlášení do ZP)
 \begin{declarationpage}
-	FILL IN ACCORDING TO THE INSTRUCTIONS. VYPLŇTE V SOULADU S POKYNY. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Suspendisse sagittis ultrices augue. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Pellentesque pretium lectus id turpis.
+	Prohlašuji, že jsem předloženou práci vypracovala samostatně a že jsem uvedla veškeré použité
+informační zdroje v souladu s Metodickým pokynem o dodržování etických principů při přípravě
+vysokoškolských závěrečných prací.
 
-	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Suspendisse sagittis ultrices augue. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Pellentesque pretium lectus id turpis.
+Beru na vědomí, že se na moji práci vztahují práva a povinnosti vyplývající ze zákona č. 121/2000 Sb.,
+autorského zákona, ve znění pozdějších předpisů, zejména skutečnost, že České vysoké učení
+technické v Praze má právo na uzavření licenční smlouvy o užití této práce jako školního díla podle §
+60 odst. 1 citovaného zákona.
 \end{declarationpage}
 %%%%%%%%%%%%%%%%%%%
 % DECLARATION END
@@ -213,15 +231,8 @@
 \chapter{\thectufitabbreviationlabel}
 
 \begin{tabular}{rl}
-	DFA   & Deterministic Finite Automaton                 \\
-	FA    & Finite Automaton                               \\
-	LPS   & Labelled Prüfer Sequence                       \\
-	NFA   & Nondeterministic Finite Automaton              \\
-	NPS   & Numbered Prüfer Sequence                       \\
-	XML   & Extensible Markup Language                     \\
-	XPath & XML Path Language                              \\
-	XSLT  & eXtensible Stylesheet Language Transformations \\
-	W3C   & World Wide Web Consortium
+	AR   & Augmented Reality                 \\
+	FA    & Finite Automaton
 \end{tabular}
 %%%%%%%%%%%%%%%%%%%
 % ABBREVIATIONS END
