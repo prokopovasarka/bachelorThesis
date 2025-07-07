@@ -1,8 +1,10 @@
 % Do not forget to include Introduction
 %---------------------------------------------------------------
-\chapter{Úvod}
-\setcounter{page}{1}
+\chapter*{Úvod}\addcontentsline{toc}{chapter}{Úvod}\markboth{Úvod}{Úvod}
 \input{text/chapters/introduction.tex}
+\chapter{Cíl práce}
+\input{text/chapters/goal.tex}
+\setcounter{page}{1}
 % uncomment the following line to create an unnumbered chapter
 %\chapter*{Introduction}\addcontentsline{toc}{chapter}{Introduction}\markboth{Introduction}{Introduction}
 %---------------------------------------------------------------
@@ -30,4 +32,17 @@
 % \end{listing}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\chapter{Návrh}
+%\input{text/chapters/concept/concept.tex}
 
+\chapter{Implementace}
+%\input{text/chapters/implementation/implementation.tex}
+
+\chapter{Testování}
+%\input{text/chapters/testing/testing.tex}
+
+\chapter{Vyhodnocení, další rozvoj}
+%\input{text/chapters/evaluation/evaluation.tex}
+
+\chapter*{Závěr}\addcontentsline{toc}{chapter}{Závěr}\markboth{Závěr}{Závěr}
+\chapter*{Literatura}\addcontentsline{toc}{chapter}{Literatura}\markboth{Literatura}{Literatura}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.2)  7 JUL 2025 17:56
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.2)  7 JUL 2025 18:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1321,19 +1321,55 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 \openout2 = `text/text.aux'.
 
- (./text/text.tex
-Kapitola 1.
-(./text/chapters/introduction.tex)
+ (./text/text.tex (./text/chapters/introduction.tex)
 
 [1
 
 
 
 ]
+Kapitola 1.
+(./text/chapters/goal.tex)
+
+[1
+
+]
 Kapitola 2.
-(./text/chapters/analysis/analysis.tex (./text/chapters/analysis/colour-theory.tex)))
+(./text/chapters/analysis/analysis.tex (./text/chapters/analysis/colour-theory.tex))
 
 [2
+
+]
+Kapitola 3.
+
+
+[3
+
+]
+Kapitola 4.
+
+
+[4
+
+]
+Kapitola 5.
+
+
+[5
+
+]
+Kapitola 6.
+
+
+[6
+
+]
+
+[7
+
+])
+
+[8
 
 ]
 \openout2 = `text/appendix.aux'.
@@ -1342,7 +1378,7 @@ Kapitola 2.
 P\v {r}\'{\i }loha A.
 )
 
-[3
+[9
 
 
 
@@ -1355,7 +1391,7 @@ LaTeX Warning: Empty bibliography on input line 255.
 
 (./text/medium.tex)
 
-[4
+[10
 
 
 
@@ -1367,18 +1403,18 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
 Package rerunfilecheck Info: File `ctufit-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 0B937E229EDDEF1CB332E52931E093A3;1000.
+(rerunfilecheck)             Checksum: A8EF5B0D9C40002C78B9BE8F88EF4F11;1676.
 Package logreq Info: Writing requests to 'ctufit-thesis.run.xml'.
 \openout1 = `ctufit-thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38484 strings out of 468529
- 705462 string characters out of 5451400
- 1651301 words of memory out of 5000000
- 66224 multiletter control sequences out of 15000+600000
+ 38490 strings out of 468529
+ 705603 string characters out of 5451400
+ 1652142 words of memory out of 5000000
+ 66227 multiletter control sequences out of 15000+600000
  631961 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,17n,109p,1543b,5441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ctufit-thesis.pdf (14 pages).
+Output written on ctufit-thesis.pdf (21 pages).
