@@ -11,6 +11,11 @@
 \contentsline {chapter}{\numberline {1}Cíl práce}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Analýza}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Teorie barev}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Barevné sady a tvorba barevných palet}{2}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Extrakce informace z fotografie a AR}{2}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Rešerše existujících řešení}{2}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Požadavky}{2}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Model případu užití}{2}{section.2.6}%
 \contentsline {chapter}{\numberline {3}Návrh}{3}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Implementace}{4}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Testování}{5}{chapter.5}%

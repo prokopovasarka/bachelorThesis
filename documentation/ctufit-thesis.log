@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.2)  7 JUL 2025 20:24
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.2)  8 JUL 2025 15:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1335,31 +1335,31 @@ Kapitola 1.
 
 ]
 Kapitola 2.
-(./text/chapters/analysis/analysis.tex (./text/chapters/analysis/colour-theory.tex))
+(./text/chapters/1_analysis/analysis.tex (./text/chapters/1_analysis/1_colour-theory.tex) (./text/chapters/1_analysis/2_palettes.tex) (./text/chapters/1_analysis/3_extraction-AR.tex) (./text/chapters/1_analysis/4_research.tex) (./text/chapters/1_analysis/5_requirements.tex) (./text/chapters/1_analysis/6_use-cases.tex))
 
 [2
 
 ]
 Kapitola 3.
-
+(./text/chapters/2_concept/concept.tex)
 
 [3
 
 ]
 Kapitola 4.
-
+(./text/chapters/3_implementation/implementation.tex)
 
 [4
 
 ]
 Kapitola 5.
-
+(./text/chapters/4_testing/testing.tex)
 
 [5
 
 ]
 Kapitola 6.
-
+(./text/chapters/5_evaluation/evaluation.tex)
 
 [6
 
@@ -1403,16 +1403,16 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
 Package rerunfilecheck Info: File `ctufit-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A8EF5B0D9C40002C78B9BE8F88EF4F11;1676.
+(rerunfilecheck)             Checksum: 51938B2E7D1A407DCACC9A3525AEEDDD;2675.
 Package logreq Info: Writing requests to 'ctufit-thesis.run.xml'.
 \openout1 = `ctufit-thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38488 strings out of 468529
- 705529 string characters out of 5451400
- 1654142 words of memory out of 5000000
- 66225 multiletter control sequences out of 15000+600000
+ 38548 strings out of 468529
+ 707909 string characters out of 5451400
+ 1655193 words of memory out of 5000000
+ 66254 multiletter control sequences out of 15000+600000
  631961 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,17n,109p,1543b,5441s stack positions out of 10000i,1000n,20000p,200000b,200000s
