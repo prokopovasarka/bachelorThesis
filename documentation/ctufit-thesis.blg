@@ -1,0 +1,14 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[1] Config.pm:311> INFO - Logfile is 'ctufit-thesis.blg'
+[261] biber-MSWIN64:340> INFO - === 
+[349] Biber.pm:420> INFO - Reading 'ctufit-thesis.bcf'
+[632] Biber.pm:994> INFO - Found 1 citekeys in bib section 0
+[684] Biber.pm:4463> INFO - Processing section 0
+[719] Biber.pm:4654> INFO - Looking for bibtex file 'text/bib-database.bib' for section 0
+[881] bibtex.pm:1713> INFO - LaTeX decoding ...
+[893] bibtex.pm:1519> INFO - Found BibTeX data source 'text/bib-database.bib'
+[986] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
+[986] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[987] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
+[989] bbl.pm:676> INFO - Writing 'ctufit-thesis.bbl' with encoding 'UTF-8'
+[994] bbl.pm:779> INFO - Output to ctufit-thesis.bbl

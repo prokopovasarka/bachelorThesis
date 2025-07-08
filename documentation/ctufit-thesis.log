@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.2)  8 JUL 2025 15:47
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.2)  8 JUL 2025 19:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1196,9 +1196,8 @@ Package biblatex Info: Automatic encoding selection.
 \openout5 = `ctufit-thesis.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'ctufit-thesis.bbl' not found.
-
-No file ctufit-thesis.bbl.
+Package biblatex Info: ... file 'ctufit-thesis.bbl' found.
+ (./ctufit-thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 129.
 Package biblatex Info: Reference segment=0 on input line 129.
 \c@lstlisting=\count519
@@ -1335,41 +1334,45 @@ Kapitola 1.
 
 ]
 Kapitola 2.
-(./text/chapters/1_analysis/analysis.tex (./text/chapters/1_analysis/1_colour-theory.tex) (./text/chapters/1_analysis/2_palettes.tex) (./text/chapters/1_analysis/3_extraction-AR.tex) (./text/chapters/1_analysis/4_research.tex) (./text/chapters/1_analysis/5_requirements.tex) (./text/chapters/1_analysis/6_use-cases.tex))
+(./text/chapters/1_analysis/analysis.tex (./text/chapters/1_analysis/1_colour-theory.tex) (./text/chapters/1_analysis/2_palettes.tex) (./text/chapters/1_analysis/3_extraction-AR.tex) (./text/chapters/1_analysis/4_research.tex
 
 [2
 
-]
+]) (./text/chapters/1_analysis/5_requirements.tex) (./text/chapters/1_analysis/6_use-cases.tex))
+
+Package babel Info: 'czech' activates 'czech' shorthands.
+(babel)             Reported  on input line 35.
+[3]
 Kapitola 3.
 (./text/chapters/2_concept/concept.tex)
 
-[3
+[4
 
 ]
 Kapitola 4.
 (./text/chapters/3_implementation/implementation.tex)
 
-[4
+[5
 
 ]
 Kapitola 5.
 (./text/chapters/4_testing/testing.tex)
 
-[5
+[6
 
 ]
 Kapitola 6.
 (./text/chapters/5_evaluation/evaluation.tex)
 
-[6
+[7
 
 ]
 
-[7
+[8
 
 ])
 
-[8
+[9
 
 ]
 \openout2 = `text/appendix.aux'.
@@ -1378,23 +1381,24 @@ Kapitola 6.
 P\v {r}\'{\i }loha A.
 )
 
-[9
+[10
 
 
 
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 255.
+[11
 
+
+
+
+]
 \openout2 = `text/medium.aux'.
 
-(./text/medium.tex)
+ (./text/medium.tex)
 
-[10
-
-
-
+[12
 
 
 ] (./ctufit-thesis.aux (./text/text.aux) (./text/appendix.aux) (./text/medium.aux))
@@ -1403,18 +1407,18 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
 Package rerunfilecheck Info: File `ctufit-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 51938B2E7D1A407DCACC9A3525AEEDDD;2675.
+(rerunfilecheck)             Checksum: A5530D019928ADE3E536F84A5B1DB074;2762.
 Package logreq Info: Writing requests to 'ctufit-thesis.run.xml'.
 \openout1 = `ctufit-thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38548 strings out of 468529
- 707909 string characters out of 5451400
- 1655193 words of memory out of 5000000
- 66254 multiletter control sequences out of 15000+600000
+ 38800 strings out of 468529
+ 713316 string characters out of 5451400
+ 1656380 words of memory out of 5000000
+ 66504 multiletter control sequences out of 15000+600000
  631961 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,17n,109p,1543b,5441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ctufit-thesis.pdf (21 pages).
+Output written on ctufit-thesis.pdf (23 pages).
