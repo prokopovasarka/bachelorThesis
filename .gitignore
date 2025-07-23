@@ -30,6 +30,8 @@
 *.nls
 *.out
 #*.pdf
+!assignment.pdf
+!images/logoCVUT.pdf
 *.pyg
 *.run.xml
 *.snm
