@@ -1,0 +1,1065 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{goethe1840}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=144841064e76da7120a6c25b8566c1f7}{%
+           family={Goethe},
+           familyi={G\bibinitperiod},
+           given={Johann\bibnamedelima Wolfgang},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \name{introduction}{1}{}{%
+        {{hash=3f68e48c692606586b6a0e6bdba33923}{%
+           family={Judd},
+           familyi={J\bibinitperiod},
+           given={Deane\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \name{translator}{1}{}{%
+        {{hash=454f88d2c8aa26d46c99c3dd18ec3d2a}{%
+           family={Eastlake},
+           familyi={E\bibinitperiod},
+           given={Charles\bibnamedelima Lock},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {John Murray}%
+      }
+      \strng{namehash}{144841064e76da7120a6c25b8566c1f7}
+      \strng{fullhash}{144841064e76da7120a6c25b8566c1f7}
+      \strng{fullhashraw}{144841064e76da7120a6c25b8566c1f7}
+      \strng{bibnamehash}{144841064e76da7120a6c25b8566c1f7}
+      \strng{authorbibnamehash}{144841064e76da7120a6c25b8566c1f7}
+      \strng{authornamehash}{144841064e76da7120a6c25b8566c1f7}
+      \strng{authorfullhash}{144841064e76da7120a6c25b8566c1f7}
+      \strng{authorfullhashraw}{144841064e76da7120a6c25b8566c1f7}
+      \strng{introductionbibnamehash}{3f68e48c692606586b6a0e6bdba33923}
+      \strng{introductionnamehash}{3f68e48c692606586b6a0e6bdba33923}
+      \strng{introductionfullhash}{3f68e48c692606586b6a0e6bdba33923}
+      \strng{introductionfullhashraw}{3f68e48c692606586b6a0e6bdba33923}
+      \strng{translatorbibnamehash}{454f88d2c8aa26d46c99c3dd18ec3d2a}
+      \strng{translatornamehash}{454f88d2c8aa26d46c99c3dd18ec3d2a}
+      \strng{translatorfullhash}{454f88d2c8aa26d46c99c3dd18ec3d2a}
+      \strng{translatorfullhashraw}{454f88d2c8aa26d46c99c3dd18ec3d2a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{With notes by Charles Lock Eastlake}
+      \field{title}{Theory of Colours}
+      \field{year}{1840}
+    \endentry
+    \entry{adams2013newton}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=148c063bd464c85337cc64086180fc1c}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={C.\bibnamedelimi R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{148c063bd464c85337cc64086180fc1c}
+      \strng{fullhash}{148c063bd464c85337cc64086180fc1c}
+      \strng{fullhashraw}{148c063bd464c85337cc64086180fc1c}
+      \strng{bibnamehash}{148c063bd464c85337cc64086180fc1c}
+      \strng{authorbibnamehash}{148c063bd464c85337cc64086180fc1c}
+      \strng{authornamehash}{148c063bd464c85337cc64086180fc1c}
+      \strng{authorfullhash}{148c063bd464c85337cc64086180fc1c}
+      \strng{authorfullhashraw}{148c063bd464c85337cc64086180fc1c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Oughtred Society}
+      \field{note}{Spring issue; JOS Plus Supplement}
+      \field{number}{1}
+      \field{title}{``in Experiments, where Sense is Judge'' -- Isaac Newton's Tonometer and Colorimeter}
+      \field{volume}{22}
+      \field{year}{2013}
+      \field{pages}{41\bibrangedash 45}
+      \range{pages}{5}
+    \endentry
+    \entry{science-color}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=34bcbb0f129bd38370d24072bc527178}{%
+           family={Libraries},
+           familyi={L\bibinitperiod},
+           given={Smithsonian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=178fde647037235223ac2a188a7106b1}{%
+           family={Archives},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{organization}{2}{%
+        {Smithsonian Libraries}%
+        {Archives}%
+      }
+      \strng{namehash}{867f552c7e0dba89795589eb641d72b4}
+      \strng{fullhash}{867f552c7e0dba89795589eb641d72b4}
+      \strng{fullhashraw}{867f552c7e0dba89795589eb641d72b4}
+      \strng{bibnamehash}{867f552c7e0dba89795589eb641d72b4}
+      \strng{authorbibnamehash}{867f552c7e0dba89795589eb641d72b4}
+      \strng{authornamehash}{867f552c7e0dba89795589eb641d72b4}
+      \strng{authorfullhash}{867f552c7e0dba89795589eb641d72b4}
+      \strng{authorfullhashraw}{867f552c7e0dba89795589eb641d72b4}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed July 23, 2025}
+      \field{title}{The Science of Color}
+      \field{urlday}{23}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://library.si.edu/exhibition/color-in-a-new-light/science
+      \endverb
+      \verb{url}
+      \verb https://library.si.edu/exhibition/color-in-a-new-light/science
+      \endverb
+    \endentry
+    \entry{gage2023colour}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=1332fb80fd01786d72a73679db3b011e}{%
+           family={Gage},
+           familyi={G\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6ea2b930cd765116ad83e6b6404471ca}{%
+           family={Grovier},
+           familyi={G\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Thames}%
+        {Hudson Limited}%
+      }
+      \strng{namehash}{6ffe59d0a94a83ec4396c09d5fd1b270}
+      \strng{fullhash}{6ffe59d0a94a83ec4396c09d5fd1b270}
+      \strng{fullhashraw}{6ffe59d0a94a83ec4396c09d5fd1b270}
+      \strng{bibnamehash}{6ffe59d0a94a83ec4396c09d5fd1b270}
+      \strng{authorbibnamehash}{6ffe59d0a94a83ec4396c09d5fd1b270}
+      \strng{authornamehash}{6ffe59d0a94a83ec4396c09d5fd1b270}
+      \strng{authorfullhash}{6ffe59d0a94a83ec4396c09d5fd1b270}
+      \strng{authorfullhashraw}{6ffe59d0a94a83ec4396c09d5fd1b270}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780500778807}
+      \field{series}{World of Art}
+      \field{title}{Colour in Art}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://books.google.cz/books?id=mujNEAAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.cz/books?id=mujNEAAAQBAJ
+      \endverb
+    \endentry
+    \entry{sirIsaacNewton}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=34bcbb0f129bd38370d24072bc527178}{%
+           family={Libraries},
+           familyi={L\bibinitperiod},
+           given={Smithsonian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=178fde647037235223ac2a188a7106b1}{%
+           family={Archives},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{867f552c7e0dba89795589eb641d72b4}
+      \strng{fullhash}{867f552c7e0dba89795589eb641d72b4}
+      \strng{fullhashraw}{867f552c7e0dba89795589eb641d72b4}
+      \strng{bibnamehash}{867f552c7e0dba89795589eb641d72b4}
+      \strng{authorbibnamehash}{867f552c7e0dba89795589eb641d72b4}
+      \strng{authornamehash}{867f552c7e0dba89795589eb641d72b4}
+      \strng{authorfullhash}{867f552c7e0dba89795589eb641d72b4}
+      \strng{authorfullhashraw}{867f552c7e0dba89795589eb641d72b4}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The science of Color | Medium}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://library.si.edu/exhibition/color-in-a-new-light/science
+      \endverb
+      \verb{url}
+      \verb https://library.si.edu/exhibition/color-in-a-new-light/science
+      \endverb
+    \endentry
+    \entry{vackova2013teorie}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=2ecf691fbed0adf0ce87b8611f3f53cf}{%
+           family={Vacková},
+           familyi={V\bibinitperiod},
+           given={Aneta},
+           giveni={A\bibinitperiod}}}%
+      }
+      \name{supervisor}{1}{}{%
+        {{hash=425961025313697079b0d7a9df7c9109}{%
+           family={Petr\bibnamedelima Veselý},
+           familyi={P\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Ph.D.},
+           giveni={P\bibinitperiod},
+           suffix={DiS.},
+           suffixi={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Masarykova univerzita, Lékařská fakulta}%
+      }
+      \list{location}{1}{%
+        {Brno}%
+      }
+      \strng{namehash}{2ecf691fbed0adf0ce87b8611f3f53cf}
+      \strng{fullhash}{2ecf691fbed0adf0ce87b8611f3f53cf}
+      \strng{fullhashraw}{2ecf691fbed0adf0ce87b8611f3f53cf}
+      \strng{bibnamehash}{2ecf691fbed0adf0ce87b8611f3f53cf}
+      \strng{authorbibnamehash}{2ecf691fbed0adf0ce87b8611f3f53cf}
+      \strng{authornamehash}{2ecf691fbed0adf0ce87b8611f3f53cf}
+      \strng{authorfullhash}{2ecf691fbed0adf0ce87b8611f3f53cf}
+      \strng{authorfullhashraw}{2ecf691fbed0adf0ce87b8611f3f53cf}
+      \strng{supervisorbibnamehash}{425961025313697079b0d7a9df7c9109}
+      \strng{supervisornamehash}{425961025313697079b0d7a9df7c9109}
+      \strng{supervisorfullhash}{425961025313697079b0d7a9df7c9109}
+      \strng{supervisorfullhashraw}{425961025313697079b0d7a9df7c9109}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Teorie barevného vidění}
+      \field{type}{Bakalářská práce}
+      \field{urlday}{23}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://is.muni.cz/th/u7qow/Teorie_barevneho_videni.pdf
+      \endverb
+      \verb{url}
+      \verb https://is.muni.cz/th/u7qow/Teorie_barevneho_videni.pdf
+      \endverb
+    \endentry
+    \entry{958782}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=17603057941050dedee43f51bedbb058}{%
+           family={Sengupta},
+           familyi={S\bibinitperiod},
+           given={D.L.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b3855d6e27551949de690f9af0e899df}{%
+           family={Sarkar},
+           familyi={S\bibinitperiod},
+           given={T.K.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{503b786ff83de0e27525b9a0c606f05b}
+      \strng{fullhash}{503b786ff83de0e27525b9a0c606f05b}
+      \strng{fullhashraw}{503b786ff83de0e27525b9a0c606f05b}
+      \strng{bibnamehash}{503b786ff83de0e27525b9a0c606f05b}
+      \strng{authorbibnamehash}{503b786ff83de0e27525b9a0c606f05b}
+      \strng{authornamehash}{503b786ff83de0e27525b9a0c606f05b}
+      \strng{authorfullhash}{503b786ff83de0e27525b9a0c606f05b}
+      \strng{authorfullhashraw}{503b786ff83de0e27525b9a0c606f05b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Antennas and Propagation Society International Symposium. 2001 Digest. Held in conjunction with: USNC/URSI National Radio Science Meeting (Cat. No.01CH37229)}
+      \field{title}{Maxwell, Hertz, the Maxwellians and the early history of electromagnetic waves}
+      \field{volume}{1}
+      \field{year}{2001}
+      \field{pages}{14\bibrangedash 17 vol.1}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/APS.2001.958782
+      \endverb
+      \keyw{History;Electromagnetic scattering;Maxwell equations;Electromagnetic fields;Production;Laboratories;Modems;Partial differential equations;Magnetic fields}
+    \endentry
+    \entry{cone-response}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=c7c79a6e6d1ba20fc90d2873335607f1}{%
+           family={contributors},
+           familyi={c\bibinitperiod},
+           given={Wikimedia\bibnamedelima Commons},
+           giveni={W\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7c79a6e6d1ba20fc90d2873335607f1}
+      \strng{fullhash}{c7c79a6e6d1ba20fc90d2873335607f1}
+      \strng{fullhashraw}{c7c79a6e6d1ba20fc90d2873335607f1}
+      \strng{bibnamehash}{c7c79a6e6d1ba20fc90d2873335607f1}
+      \strng{authorbibnamehash}{c7c79a6e6d1ba20fc90d2873335607f1}
+      \strng{authornamehash}{c7c79a6e6d1ba20fc90d2873335607f1}
+      \strng{authorfullhash}{c7c79a6e6d1ba20fc90d2873335607f1}
+      \strng{authorfullhashraw}{c7c79a6e6d1ba20fc90d2873335607f1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cone response}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://commons.wikimedia.org/wiki/File:Cone-response-en.png
+      \endverb
+      \verb{url}
+      \verb https://commons.wikimedia.org/wiki/File:Cone-response-en.png
+      \endverb
+    \endentry
+    \entry{jelen2023vliv_barev}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=08f0d8855c447afcbdb99cdb5aab25bf}{%
+           family={Jelen},
+           familyi={J\bibinitperiod},
+           given={Vojtěch},
+           giveni={V\bibinitperiod}}}%
+      }
+      \name{supervisor}{1}{}{%
+        {{hash=c4ccf42016aebf3261799d26b5aea233}{%
+           family={PhDr.\bibnamedelimi Václav\bibnamedelima Hájek},
+           familyi={P\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Ph.D.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Univerzita Karlova, Fakulta humanitních studií}%
+      }
+      \list{location}{1}{%
+        {Praha}%
+      }
+      \strng{namehash}{08f0d8855c447afcbdb99cdb5aab25bf}
+      \strng{fullhash}{08f0d8855c447afcbdb99cdb5aab25bf}
+      \strng{fullhashraw}{08f0d8855c447afcbdb99cdb5aab25bf}
+      \strng{bibnamehash}{08f0d8855c447afcbdb99cdb5aab25bf}
+      \strng{authorbibnamehash}{08f0d8855c447afcbdb99cdb5aab25bf}
+      \strng{authornamehash}{08f0d8855c447afcbdb99cdb5aab25bf}
+      \strng{authorfullhash}{08f0d8855c447afcbdb99cdb5aab25bf}
+      \strng{authorfullhashraw}{08f0d8855c447afcbdb99cdb5aab25bf}
+      \strng{supervisorbibnamehash}{c4ccf42016aebf3261799d26b5aea233}
+      \strng{supervisornamehash}{c4ccf42016aebf3261799d26b5aea233}
+      \strng{supervisorfullhash}{c4ccf42016aebf3261799d26b5aea233}
+      \strng{supervisorfullhashraw}{c4ccf42016aebf3261799d26b5aea233}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Otázka vlivu barev na spotřebitelské chování v kontextu jejich percepce a symboliky}
+      \field{type}{Bakalářská práce}
+      \field{urlday}{23}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dspace.cuni.cz/bitstream/handle/20.500.11956/188964/130380558.pdf?sequence=1
+      \endverb
+      \verb{url}
+      \verb https://dspace.cuni.cz/bitstream/handle/20.500.11956/188964/130380558.pdf?sequence=1
+      \endverb
+    \endentry
+    \entry{pantone}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=70d6653723c3a1621a7a6c1001739d67}{%
+           family={LLC},
+           familyi={L\bibinitperiod},
+           given={Pantone},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Pantone}%
+      }
+      \strng{namehash}{70d6653723c3a1621a7a6c1001739d67}
+      \strng{fullhash}{70d6653723c3a1621a7a6c1001739d67}
+      \strng{fullhashraw}{70d6653723c3a1621a7a6c1001739d67}
+      \strng{bibnamehash}{70d6653723c3a1621a7a6c1001739d67}
+      \strng{authorbibnamehash}{70d6653723c3a1621a7a6c1001739d67}
+      \strng{authornamehash}{70d6653723c3a1621a7a6c1001739d67}
+      \strng{authorfullhash}{70d6653723c3a1621a7a6c1001739d67}
+      \strng{authorfullhashraw}{70d6653723c3a1621a7a6c1001739d67}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What Is Color?}
+      \field{urlday}{23}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.pantone.com/articles/color-fundamentals/what-is-color?srsltid=AfmBOopg6UBko2e-BNFPDss2Tu_9yYq8S7QT2e_GIcs_cMv0m_fwgiri
+      \endverb
+      \verb{url}
+      \verb https://www.pantone.com/articles/color-fundamentals/what-is-color?srsltid=AfmBOopg6UBko2e-BNFPDss2Tu_9yYq8S7QT2e_GIcs_cMv0m_fwgiri
+      \endverb
+    \endentry
+    \entry{hanulikova2013}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=9ab3f8df0c8ce4624f4dd96a7b04b510}{%
+           family={Hanulíková},
+           familyi={H\bibinitperiod},
+           given={Gabriela},
+           giveni={G\bibinitperiod}}}%
+      }
+      \name{supervisor}{1}{}{%
+        {{hash=5259d8dcbceb2129f24189705d2bbcb4}{%
+           family={Mgr.\bibnamedelimi Vladan\bibnamedelima Bernard},
+           familyi={M\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Ph.D.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Masarykova univerzita, Lékařská fakulta}%
+      }
+      \strng{namehash}{9ab3f8df0c8ce4624f4dd96a7b04b510}
+      \strng{fullhash}{9ab3f8df0c8ce4624f4dd96a7b04b510}
+      \strng{fullhashraw}{9ab3f8df0c8ce4624f4dd96a7b04b510}
+      \strng{bibnamehash}{9ab3f8df0c8ce4624f4dd96a7b04b510}
+      \strng{authorbibnamehash}{9ab3f8df0c8ce4624f4dd96a7b04b510}
+      \strng{authornamehash}{9ab3f8df0c8ce4624f4dd96a7b04b510}
+      \strng{authorfullhash}{9ab3f8df0c8ce4624f4dd96a7b04b510}
+      \strng{authorfullhashraw}{9ab3f8df0c8ce4624f4dd96a7b04b510}
+      \strng{supervisorbibnamehash}{5259d8dcbceb2129f24189705d2bbcb4}
+      \strng{supervisornamehash}{5259d8dcbceb2129f24189705d2bbcb4}
+      \strng{supervisorfullhash}{5259d8dcbceb2129f24189705d2bbcb4}
+      \strng{supervisorfullhashraw}{5259d8dcbceb2129f24189705d2bbcb4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Zraková ostrost a citlivost vliv fyzikálních parametrů prostředí}
+      \field{type}{Diplomová práce}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://is.muni.cz/th/gpxge/Diplomova_prace.pdf
+      \endverb
+      \verb{url}
+      \verb https://is.muni.cz/th/gpxge/Diplomova_prace.pdf
+      \endverb
+    \endentry
+    \entry{RodsAndCones}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4929eea8e66d49d2666d4c715d9d202f}{%
+           family={Biology},
+           familyi={B\bibinitperiod},
+           given={Dr.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Arizona State University, Ask A Biologist}%
+      }
+      \strng{namehash}{4929eea8e66d49d2666d4c715d9d202f}
+      \strng{fullhash}{4929eea8e66d49d2666d4c715d9d202f}
+      \strng{fullhashraw}{4929eea8e66d49d2666d4c715d9d202f}
+      \strng{bibnamehash}{4929eea8e66d49d2666d4c715d9d202f}
+      \strng{authorbibnamehash}{4929eea8e66d49d2666d4c715d9d202f}
+      \strng{authornamehash}{4929eea8e66d49d2666d4c715d9d202f}
+      \strng{authorfullhash}{4929eea8e66d49d2666d4c715d9d202f}
+      \strng{authorfullhashraw}{4929eea8e66d49d2666d4c715d9d202f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Rods and Cones of the Human Eye}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://askabiologist.asu.edu/rods-and-cones
+      \endverb
+      \verb{url}
+      \verb https://askabiologist.asu.edu/rods-and-cones
+      \endverb
+    \endentry
+    \entry{soukup2020}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=72c01eba845fad74531565fc7dd7c84e}{%
+           family={Soukup},
+           familyi={S\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{supervisor}{1}{}{%
+        {{hash=03dd52d353cda1083c2d3678116f8217}{%
+           family={Mgr.\bibnamedelimi Jana\bibnamedelima Urzová},
+           familyi={M\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim U\bibinitperiod},
+           given={Ph.D.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {České vysoké učení technické v Praze, Fakulta biomedicínského inženýrství}%
+      }
+      \strng{namehash}{72c01eba845fad74531565fc7dd7c84e}
+      \strng{fullhash}{72c01eba845fad74531565fc7dd7c84e}
+      \strng{fullhashraw}{72c01eba845fad74531565fc7dd7c84e}
+      \strng{bibnamehash}{72c01eba845fad74531565fc7dd7c84e}
+      \strng{authorbibnamehash}{72c01eba845fad74531565fc7dd7c84e}
+      \strng{authornamehash}{72c01eba845fad74531565fc7dd7c84e}
+      \strng{authorfullhash}{72c01eba845fad74531565fc7dd7c84e}
+      \strng{authorfullhashraw}{72c01eba845fad74531565fc7dd7c84e}
+      \strng{supervisorbibnamehash}{03dd52d353cda1083c2d3678116f8217}
+      \strng{supervisornamehash}{03dd52d353cda1083c2d3678116f8217}
+      \strng{supervisorfullhash}{03dd52d353cda1083c2d3678116f8217}
+      \strng{supervisorfullhashraw}{03dd52d353cda1083c2d3678116f8217}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Vliv světelných podmínek na vnímání barev}
+      \field{type}{Bakalářská práce}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dspace.cvut.cz/bitstream/handle/10467/91222/FBMI-BP-2020-Soukup-Jan-prace.pdf
+      \endverb
+      \verb{url}
+      \verb https://dspace.cvut.cz/bitstream/handle/10467/91222/FBMI-BP-2020-Soukup-Jan-prace.pdf
+      \endverb
+    \endentry
+    \entry{memory-colour-strawberries}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=70244e7b9e6059c03b32afd308795d54}{%
+           family={Kitaoka},
+           familyi={K\bibinitperiod},
+           given={Akiyoshi},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikimedia Foundation}%
+      }
+      \strng{namehash}{70244e7b9e6059c03b32afd308795d54}
+      \strng{fullhash}{70244e7b9e6059c03b32afd308795d54}
+      \strng{fullhashraw}{70244e7b9e6059c03b32afd308795d54}
+      \strng{bibnamehash}{70244e7b9e6059c03b32afd308795d54}
+      \strng{authorbibnamehash}{70244e7b9e6059c03b32afd308795d54}
+      \strng{authornamehash}{70244e7b9e6059c03b32afd308795d54}
+      \strng{authorfullhash}{70244e7b9e6059c03b32afd308795d54}
+      \strng{authorfullhashraw}{70244e7b9e6059c03b32afd308795d54}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{English Wikipedia}
+      \field{title}{Strawberries memory colour}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Memory_color_effect#/media/File:Strawberries_memory_colour.jpg
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Memory_color_effect#/media/File:Strawberries_memory_colour.jpg
+      \endverb
+    \endentry
+    \entry{color-perception}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c87caab4165f127f5e3b5cea5e446291}{%
+           family={Witzel},
+           familyi={W\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6193cbf51bbf48f59f72bd2a39ffdb1d}{%
+           family={Gegenfurtner},
+           familyi={G\bibinitperiod},
+           given={Karl\bibnamedelima R.},
+           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Annual Reviews}%
+      }
+      \strng{namehash}{1e2cd3f79bab57d6a12a05e7a3e483bd}
+      \strng{fullhash}{1e2cd3f79bab57d6a12a05e7a3e483bd}
+      \strng{fullhashraw}{1e2cd3f79bab57d6a12a05e7a3e483bd}
+      \strng{bibnamehash}{1e2cd3f79bab57d6a12a05e7a3e483bd}
+      \strng{authorbibnamehash}{1e2cd3f79bab57d6a12a05e7a3e483bd}
+      \strng{authornamehash}{1e2cd3f79bab57d6a12a05e7a3e483bd}
+      \strng{authorfullhash}{1e2cd3f79bab57d6a12a05e7a3e483bd}
+      \strng{authorfullhashraw}{1e2cd3f79bab57d6a12a05e7a3e483bd}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Color has been scientifically investigated by linking color appearance to colorimetric measurements of the light that enters the eye. However, the main purpose of color perception is not to determine the properties of incident light, but to aid the visual perception of objects and materials in our environment. We review the state of the art on object colors, color constancy, and color categories to gain insight into the functional aspects of color perception. The common ground between these areas of research is that color appearance is tightly linked to the identification of objects and materials and the communication across observers. In conclusion, we argue that research should focus on how color processing is adapted to the surface properties of objects in the natural environment in order to bridge the gap between the known early stages of color perception and the subjective appearance of color.}
+      \field{issn}{2374-4650}
+      \field{journaltitle}{Annual Review of Vision Science}
+      \field{number}{Volume 4, 2018}
+      \field{title}{Color Perception: Objects, Constancy, and Categories}
+      \field{type}{Journal Article}
+      \field{volume}{4}
+      \field{year}{2018}
+      \field{pages}{475\bibrangedash 499}
+      \range{pages}{25}
+      \verb{doi}
+      \verb https://doi.org/10.1146/annurev-vision-091517-034231
+      \endverb
+      \verb{urlraw}
+      \verb https://www.annualreviews.org/content/journals/10.1146/annurev-vision-091517-034231
+      \endverb
+      \verb{url}
+      \verb https://www.annualreviews.org/content/journals/10.1146/annurev-vision-091517-034231
+      \endverb
+      \keyw{categorical perception}
+    \endentry
+    \entry{BEAULOTTO2002609}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a042cfd28f62ed439164dd143c93d900}{%
+           family={{Beau Lotto}},
+           familyi={B\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=930c23fd5b2003cda9e47f0bee1a2090}{%
+           family={Purves},
+           familyi={P\bibinitperiod},
+           given={Dale},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd878b44e3686b44ba42c507c5d5a7c}
+      \strng{fullhash}{5bd878b44e3686b44ba42c507c5d5a7c}
+      \strng{fullhashraw}{5bd878b44e3686b44ba42c507c5d5a7c}
+      \strng{bibnamehash}{5bd878b44e3686b44ba42c507c5d5a7c}
+      \strng{authorbibnamehash}{5bd878b44e3686b44ba42c507c5d5a7c}
+      \strng{authornamehash}{5bd878b44e3686b44ba42c507c5d5a7c}
+      \strng{authorfullhash}{5bd878b44e3686b44ba42c507c5d5a7c}
+      \strng{authorfullhashraw}{5bd878b44e3686b44ba42c507c5d5a7c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Rationalizing the perceptual effects of spectral stimuli has been a major challenge in vision science for at least the last 200 years. Here we review evidence that this otherwise puzzling body of phenomenology is generated by an empirical strategy of perception in which the color an observer sees is entirely determined by the probability distribution of the possible sources of the stimulus. The rationale for this strategy in color vision, as in other visual perceptual domains, is the inherent ambiguity of the real-world origins of any spectral stimulus.}
+      \field{issn}{1053-8100}
+      \field{journaltitle}{Consciousness and Cognition}
+      \field{number}{4}
+      \field{title}{The empirical basis of color perception}
+      \field{volume}{11}
+      \field{year}{2002}
+      \field{pages}{609\bibrangedash 629}
+      \range{pages}{21}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S1053-8100(02)00014-4
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1053810002000144
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1053810002000144
+      \endverb
+    \endentry
+    \entry{infant-perception}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=5f86ad91de9c95f4d80ac91c4810522b}{%
+           family={Skelton},
+           familyi={S\bibinitperiod},
+           given={Alice\bibnamedelima E.},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=ae6245001c12732c882b4da4e6834e49}{%
+           family={Maule},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bb182e6b30e0f730adbe63ed650f8778}{%
+           family={Franklin},
+           familyi={F\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc193095364b0d7b2c5ca699184463bd}
+      \strng{fullhash}{bc193095364b0d7b2c5ca699184463bd}
+      \strng{fullhashraw}{bc193095364b0d7b2c5ca699184463bd}
+      \strng{bibnamehash}{bc193095364b0d7b2c5ca699184463bd}
+      \strng{authorbibnamehash}{bc193095364b0d7b2c5ca699184463bd}
+      \strng{authornamehash}{bc193095364b0d7b2c5ca699184463bd}
+      \strng{authorfullhash}{bc193095364b0d7b2c5ca699184463bd}
+      \strng{authorfullhashraw}{bc193095364b0d7b2c5ca699184463bd}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract A remarkable amount of perceptual development occurs in the first year after birth. In this article, we spotlight the case of color perception. We outline how within just 6 months, infants go from very limited detection of color as newborns to a more sophisticated perception of color that enables them to make sense of objects and the world around them. We summarize the evidence that by 6 months, infants can perceive the dimensions of color and categorize it, and have at least rudimentary mechanisms to keep color perceptually constant despite variation in illumination. In addition, infants’ sensitivity to color relates to statistical regularities of color in natural scenes. We illustrate the contribution of these findings to understanding the development of perceptual skills such as discrimination, categorization, and constancy. We also discuss the relevance of the findings for broader questions about perceptual development and identify directions for research.}
+      \field{journaltitle}{Child Development Perspectives}
+      \field{number}{2}
+      \field{title}{Infant color perception: Insight into perceptual development}
+      \field{volume}{16}
+      \field{year}{2022}
+      \field{pages}{90\bibrangedash 95}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1111/cdep.12447
+      \endverb
+      \verb{eprint}
+      \verb https://srcd.onlinelibrary.wiley.com/doi/pdf/10.1111/cdep.12447
+      \endverb
+      \verb{urlraw}
+      \verb https://srcd.onlinelibrary.wiley.com/doi/abs/10.1111/cdep.12447
+      \endverb
+      \verb{url}
+      \verb https://srcd.onlinelibrary.wiley.com/doi/abs/10.1111/cdep.12447
+      \endverb
+      \keyw{color,infants,perception}
+    \endentry
+    \entry{Akers2012}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=46ff210408d204d18faf3f27d7aa9d44}{%
+           family={Akers},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=dea14d0661cf066d423cc6cf143a342d}{%
+           family={Barton},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=132cec2e421c24612db30a981690ab0c}{%
+           family={Cossey},
+           familyi={C\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9af541da0400afe0a20f075aba25ba52}{%
+           family={Gainsford},
+           familyi={G\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=674c6a69dd9ba17165eac68362e64958}{%
+           family={Griffin},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=961ab0c4535ce449ef16c8ccaa5fb93a}{%
+           family={Micklewright},
+           familyi={M\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{31b08915d00fb0cc7470c30563718665}
+      \strng{fullhash}{31b08915d00fb0cc7470c30563718665}
+      \strng{fullhashraw}{31b08915d00fb0cc7470c30563718665}
+      \strng{bibnamehash}{31b08915d00fb0cc7470c30563718665}
+      \strng{authorbibnamehash}{31b08915d00fb0cc7470c30563718665}
+      \strng{authornamehash}{31b08915d00fb0cc7470c30563718665}
+      \strng{authorfullhash}{31b08915d00fb0cc7470c30563718665}
+      \strng{authorfullhashraw}{31b08915d00fb0cc7470c30563718665}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Environmental Science \& Technology}
+      \field{number}{16}
+      \field{title}{Visual color perception in green exercise: positive effects on mood and perceived exertion}
+      \field{volume}{46}
+      \field{year}{2012}
+      \field{pages}{8661\bibrangedash 8666}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1021/es301685g
+      \endverb
+    \endentry
+    \entry{consumer-behavior}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=c491ac222c10f6027d9386e474894d16}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Long},
+           giveni={L\bibinitperiod}}}%
+        {{hash=737436a08faa2714d08a45efef873170}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yun},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=214d4b6802de2b4291892a10aaa39450}{%
+           family={Nah},
+           familyi={N\bibinitperiod},
+           given={Fiona\bibnamedelima Fui-Hoon},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=d159f48a6f18b56979b9704e0e3750de}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Bo\bibnamedelima Sophia},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{a8a580313877d36d1709ce8aeab2df3f}
+      \strng{fullhash}{a8a580313877d36d1709ce8aeab2df3f}
+      \strng{fullhashraw}{a8a580313877d36d1709ce8aeab2df3f}
+      \strng{bibnamehash}{a8a580313877d36d1709ce8aeab2df3f}
+      \strng{authorbibnamehash}{a8a580313877d36d1709ce8aeab2df3f}
+      \strng{authornamehash}{a8a580313877d36d1709ce8aeab2df3f}
+      \strng{authorfullhash}{a8a580313877d36d1709ce8aeab2df3f}
+      \strng{authorfullhashraw}{a8a580313877d36d1709ce8aeab2df3f}
+      \strng{editorbibnamehash}{9f255d237d3dce3f4028281e96bfc7a1}
+      \strng{editornamehash}{9f255d237d3dce3f4028281e96bfc7a1}
+      \strng{editorfullhash}{9f255d237d3dce3f4028281e96bfc7a1}
+      \strng{editorfullhashraw}{9f255d237d3dce3f4028281e96bfc7a1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With the intensified competition, attracting and retaining the customers has become a top concern for businesses. Color has been identified as one of most significant factors influencing consumers' purchasing behavior. The purpose of the research is to explore the ways color perceptions influence consumer behavior. A better understanding of influence of color perceptions enables them to direct marketing strategies design and implementation. In the research, the researcher makes an attempt to review relevant research papers and account for why color is important in capturing the interest of consumers. In the paper, consumer behaviors, influential factors and influence of colors on consumer behavior, color meanings and roles are reviewed and critically discussed. It is expected that the study can help better understand consumers' color perceptions and their potential influence on consumer behavior. The color psychology has become growingly significant in producing and packaging products. Colors, thus, accomplished prominence in marketing activities. The findings in the established literature can offer some great implications for businesses in terms of how to leverage color for creating distinct customer experience. The established literature also highlights colors have different meanings in different culture. That indicates the importance of considering cultural difference when exploring influence of color perceptions on consumer behaviors. The paper simply reviews the established literature, and these established findings remain to be empirically tested.}
+      \field{booktitle}{HCI in Business, Government, and Organizations}
+      \field{isbn}{978-3-319-91716-0}
+      \field{title}{Influence of Color Perception on Consumer Behavior}
+      \field{year}{2018}
+      \field{pages}{413\bibrangedash 421}
+      \range{pages}{9}
+    \endentry
+    \entry{Holisova2007thesis}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=1785efae03c0765c216bdcbdb2d4515f}{%
+           family={Holišová},
+           familyi={H\bibinitperiod},
+           given={Klára},
+           giveni={K\bibinitperiod}}}%
+      }
+      \name{supervisor}{1}{}{%
+        {{hash=b393469808e6c402a28e2748d197b56f}{%
+           family={Jurečka},
+           familyi={J\bibinitperiod},
+           given={Tomáš},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Masaryk University, Faculty of Medicine}%
+      }
+      \list{location}{1}{%
+        {Brno}%
+      }
+      \strng{namehash}{1785efae03c0765c216bdcbdb2d4515f}
+      \strng{fullhash}{1785efae03c0765c216bdcbdb2d4515f}
+      \strng{fullhashraw}{1785efae03c0765c216bdcbdb2d4515f}
+      \strng{bibnamehash}{1785efae03c0765c216bdcbdb2d4515f}
+      \strng{authorbibnamehash}{1785efae03c0765c216bdcbdb2d4515f}
+      \strng{authornamehash}{1785efae03c0765c216bdcbdb2d4515f}
+      \strng{authorfullhash}{1785efae03c0765c216bdcbdb2d4515f}
+      \strng{authorfullhashraw}{1785efae03c0765c216bdcbdb2d4515f}
+      \strng{supervisorbibnamehash}{b393469808e6c402a28e2748d197b56f}
+      \strng{supervisornamehash}{b393469808e6c402a28e2748d197b56f}
+      \strng{supervisorfullhash}{b393469808e6c402a28e2748d197b56f}
+      \strng{supervisorfullhashraw}{b393469808e6c402a28e2748d197b56f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Barevné vidění}
+      \field{type}{Bachelor's thesis}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb https://is.muni.cz/th/n43x5/
+      \endverb
+      \verb{url}
+      \verb https://is.muni.cz/th/n43x5/
+      \endverb
+    \endentry
+    \entry{lenstore_color_blindness}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a3c55ff91a40b2b8d4987ef6c383e023}{%
+           family={Lenstore},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{a3c55ff91a40b2b8d4987ef6c383e023}
+      \strng{fullhash}{a3c55ff91a40b2b8d4987ef6c383e023}
+      \strng{fullhashraw}{a3c55ff91a40b2b8d4987ef6c383e023}
+      \strng{bibnamehash}{a3c55ff91a40b2b8d4987ef6c383e023}
+      \strng{authorbibnamehash}{a3c55ff91a40b2b8d4987ef6c383e023}
+      \strng{authornamehash}{a3c55ff91a40b2b8d4987ef6c383e023}
+      \strng{authorfullhash}{a3c55ff91a40b2b8d4987ef6c383e023}
+      \strng{authorfullhashraw}{a3c55ff91a40b2b8d4987ef6c383e023}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Your Guide to Colour Blindness}
+      \field{urlday}{31}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lenstore.co.uk/eyecare/your-guide-colour-blindness
+      \endverb
+      \verb{url}
+      \verb https://www.lenstore.co.uk/eyecare/your-guide-colour-blindness
+      \endverb
+    \endentry
+    \entry{CampaignMonitor}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b6da8f46b5cc1ec2589c601dc10b9db3}{%
+           family={Monitor},
+           familyi={M\bibinitperiod},
+           given={Campaign},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6da8f46b5cc1ec2589c601dc10b9db3}
+      \strng{fullhash}{b6da8f46b5cc1ec2589c601dc10b9db3}
+      \strng{fullhashraw}{b6da8f46b5cc1ec2589c601dc10b9db3}
+      \strng{bibnamehash}{b6da8f46b5cc1ec2589c601dc10b9db3}
+      \strng{authorbibnamehash}{b6da8f46b5cc1ec2589c601dc10b9db3}
+      \strng{authornamehash}{b6da8f46b5cc1ec2589c601dc10b9db3}
+      \strng{authorfullhash}{b6da8f46b5cc1ec2589c601dc10b9db3}
+      \strng{authorfullhashraw}{b6da8f46b5cc1ec2589c601dc10b9db3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Color Blindness, Accessibility and the Vision‑Impaired in Email Design}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.campaignmonitor.com/blog/email-marketing/color-blindness-accessibility-and-the-vision-impaired-in-email-design/
+      \endverb
+      \verb{url}
+      \verb https://www.campaignmonitor.com/blog/email-marketing/color-blindness-accessibility-and-the-vision-impaired-in-email-design/
+      \endverb
+      \warn{\item online entry 'CampaignMonitor' (text/bib-database.bib): Invalid format '2025‑07‑31' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{late-modernism-c-1955}{chapter}{}{}
+      \name{author}{1}{}{%
+        {{hash=19eeab7a0e5fed655ad3b170368ba0d4}{%
+           family={Best},
+           familyi={B\bibinitperiod},
+           given={Janet},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{19eeab7a0e5fed655ad3b170368ba0d4}
+      \strng{fullhash}{19eeab7a0e5fed655ad3b170368ba0d4}
+      \strng{fullhashraw}{19eeab7a0e5fed655ad3b170368ba0d4}
+      \strng{bibnamehash}{19eeab7a0e5fed655ad3b170368ba0d4}
+      \strng{authorbibnamehash}{19eeab7a0e5fed655ad3b170368ba0d4}
+      \strng{authornamehash}{19eeab7a0e5fed655ad3b170368ba0d4}
+      \strng{authorfullhash}{19eeab7a0e5fed655ad3b170368ba0d4}
+      \strng{authorfullhashraw}{19eeab7a0e5fed655ad3b170368ba0d4}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Colour Design - Theories and Applications (2nd Edition)}
+      \field{isbn}{978-0-08-101270-3}
+      \field{title}{22.12 Late Modernism (c.1955-1985)}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://app.knovel.com/hotlink/khtml/id:kt011G8LH7/colour-design-theories/late-modernism-c-1955
+      \endverb
+      \verb{url}
+      \verb https://app.knovel.com/hotlink/khtml/id:kt011G8LH7/colour-design-theories/late-modernism-c-1955
+      \endverb
+    \endentry
+    \entry{article}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=258cfce0fcfb4501405637985ff543f6}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Yuheng},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{258cfce0fcfb4501405637985ff543f6}
+      \strng{fullhash}{258cfce0fcfb4501405637985ff543f6}
+      \strng{fullhashraw}{258cfce0fcfb4501405637985ff543f6}
+      \strng{bibnamehash}{258cfce0fcfb4501405637985ff543f6}
+      \strng{authorbibnamehash}{258cfce0fcfb4501405637985ff543f6}
+      \strng{authornamehash}{258cfce0fcfb4501405637985ff543f6}
+      \strng{authorfullhash}{258cfce0fcfb4501405637985ff543f6}
+      \strng{authorfullhashraw}{258cfce0fcfb4501405637985ff543f6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Student Research}
+      \field{month}{02}
+      \field{title}{Consumer Preferences for Food Logos}
+      \field{volume}{13}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.47611/jsrhs.v13i1.6217
+      \endverb
+    \endentry
+    \entry{colormatters_basic_color_theory}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=415d59b65565bd9281b55df2ad2b0d50}{%
+           family={Morton},
+           familyi={M\bibinitperiod},
+           given={Jill},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{415d59b65565bd9281b55df2ad2b0d50}
+      \strng{fullhash}{415d59b65565bd9281b55df2ad2b0d50}
+      \strng{fullhashraw}{415d59b65565bd9281b55df2ad2b0d50}
+      \strng{bibnamehash}{415d59b65565bd9281b55df2ad2b0d50}
+      \strng{authorbibnamehash}{415d59b65565bd9281b55df2ad2b0d50}
+      \strng{authornamehash}{415d59b65565bd9281b55df2ad2b0d50}
+      \strng{authorfullhash}{415d59b65565bd9281b55df2ad2b0d50}
+      \strng{authorfullhashraw}{415d59b65565bd9281b55df2ad2b0d50}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Basic Color Theory}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.colormatters.com/color-and-design/basic-color-theory
+      \endverb
+      \verb{url}
+      \verb https://www.colormatters.com/color-and-design/basic-color-theory
+      \endverb
+      \warn{\item online entry 'colormatters_basic_color_theory' (text/bib-database.bib): Invalid format '31 July 2025' of date field 'urldate' - ignoring}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
