@@ -1,1 +1,68 @@
 \section{Požadavky}
+% dělíme na funkční a nefunkční, požadavky obsahují následující údaje:
+% název - stručný popis požadavku
+% identifikátor/zkratka - snazší odkazování
+% popis - nejdůležitější, obsahuje popis požadavku
+% priority - důležitost požadavku při vývoji, nejnižší lze nesplnit - použijeme MoSCoW
+% 1. must have - musí být splněný vždy, bez něj nefunguje app
+% 2. Should have - důležité pro projekt, ale ne nezbytné
+% 3. could have - nice to have
+% 4. will not have - volitelné, ne priorita pro tento release, spíše pro budoucí verze
+
+\subsection{Funkční požadavky}
+% FP1 - Identifikace barev 
+% Aplikace je schopná identifikovat barvy na základě kamery
+% Priorita: Must Have
+% FP2 - Tvorba barevných schémat
+% Aplikace vytváří na základě zvolené barvy další korespondující barevné palety
+% Priorita: Must have
+% FP3 - Ukládání a vyhledávání barev
+% V aplikaci je možné ukládat identifikované barvy a vyhledávat již uložené v knihovně barev.
+% Priorita: Must have
+% FP4 - Odstranění barev z knihovny
+% Lze odstranit uloženou barvu či více barev z knihovny
+% Priorita: Should have
+% FP5 - Nápověda
+% Aplikace disponuje asistentem pro orientaci v aplikaci
+% Priorita: Should have
+% FP6 - Vizualizace identifikované barvy
+% Extrahovaná barva je zobrazená v aplikaci
+% Priorita: Must have
+% FP7 - Interakce v rozšířené realitě
+% Vytvoření virtuálního bodu za pomocí rozěířené reality
+% Priorita: Must have
+% FP8 - Rozšířená interkace v AR
+% Lze vytvořit více virtuálních bodů za pomocí AR pro porovnání barev
+% Priorita: Could have
+% FP9 - Extrakce z fotografie
+% Extrakce barvy z fotografie
+% Priorita: Could have
+% FP10 - Uložení fotografie do galerie
+% Vytvořenou fotografii z kamery lze uložit do galerie
+% Priorita: Could have
+% FP11 - Blending uložených barev
+% Aplikace může vytvářet další barvy z již uložených
+% Priorita: Will not have
+% FP12 - Tvorba více barevných schémat
+% Aplikace umí vytvářet více barevných palet
+% Priorita: Will not have
+
+\subsection{Nefunkční požadavky}
+% NP1 - Multiplatformní aplikace
+% Aplikace je vyvíjena pro iOS i Android platformy.
+% Priorita: Must have
+% NP2 - Použití AR
+% Využívané komponenty z AR - interakce se světem, umístění objektů
+% Priorita: Must have
+% NP3 - Přístupnost
+% Aplikace má jednoduché UI a je přístupná všeobecnému publiku včetně osob s poruchami barevného vidění.
+% Priorita: Must have
+% NP4 - Rozšiřitelnost
+% Aplikaci lze dále jednoduše rozšiřovat v rámci tvorby dalších palet či větší interakce s extrahovanými barvami.
+% Priorita: Should have
+% NP5 - Výkon
+% Aplikace lokálně funguje plynule bez sekání a prodlev, detekce je rychlá bez významného zaznamenání při používání.
+% Priorita: Must have
+% NP6 - Technická dostupnost
+% Aplikace je dostupná pro modely Apple iPhone 8 a vyšší a Android zařízení se systémem Android 7.0 a vyšší (s ARCore podporou)
+% Priorita: Should have
