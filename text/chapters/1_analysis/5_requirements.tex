@@ -1,24 +1,40 @@
 \section{Požadavky}
-% dělíme na funkční a nefunkční, požadavky obsahují následující údaje:
-% název - stručný popis požadavku
-% identifikátor/zkratka - snazší odkazování
-% popis - nejdůležitější, obsahuje popis požadavku
-% priority - důležitost požadavku při vývoji, nejnižší lze nesplnit - použijeme MoSCoW
-% 1. must have - musí být splněný vždy, bez něj nefunguje app
-% 2. Should have - důležité pro projekt, ale ne nezbytné
-% 3. could have - nice to have
-% 4. will not have - volitelné, ne priorita pro tento release, spíše pro budoucí verze
+Po zhodnocení již existujících řešení a analýze samotné je třeba zadefinovat si požadavky
+pro aplikaci, jenž je výsledkem této práce. Jejich specifikování je podstatné pro další fáze vývoje,
+zjištění důležitých prvků a funkcionalit a stanovení priorit, kterými se budeme ve vývoji řídit.
+
+Každý požadavek vyžaduje uvedení informací umožňující nám je specifikovat pro lepší pochopení. V této práci
+využíváme následující údaje dle. % https://moodle-vyuka.cvut.cz/pluginfile.php/898714/mod_resource/content/11/03.prednaska.pdf
+
+\begin{itemize}
+  \item \textbf{Název} uvádějící stručný popis požadavku.
+  \item \textbf{Identifikátor} umožňující snazší odkazování na požadavek.
+  \item \textbf{Popis} upřesňující detaily požadavku. Jedná se o nejdůležitější část.
+  \item \textbf{Priorita} identifikující důležitost požadavku při vývoji. Specifikuje nám, 
+  bez kterých požadavků by aplikace nemohla existovat a které lze zrealizovat, ale nejsou pro tento běh významné. 
+  Pro rozdělení priorit požadavků využijeme MoSCoW metodu rozdělující prioritu do čtyř kategorií \cite{moscow}:
+   \begin{enumerate}
+    \item \textbf{Must have} definuje požadavky, které je nutné zahrnout ve finálním produktu.
+    \item \textbf{Should have} popisuje význačné požadavky, které by měl produkt obsahovat, ale aplikace bez nich může fungovat.
+    \item \textbf{Could have} požadavky jsou žádoucí, ale pouze v případě, že nevyžadují příliš velké úsilí či náklady.
+    \item \textbf{Will not have} jsou požadavky, které je v zájmu zainteresovaných stran implementovat, ale ne v aktuální časovém verzi.
+    \end{enumerate}
+\end{itemize}
 
 \subsection{Funkční požadavky}
+\paragraph{FP1 - Identifikace barev} Aplikace rozpozná barvy podle kamery. \emph{(Must have)} 
 % FP1 - Identifikace barev 
 % Aplikace je schopná identifikovat barvy na základě kamery
 % Priorita: Must Have
+\paragraph{FP2 - Tvorba barevných schémat} Na základě vybrané barvy se automaticky generují korespondující barevné palety. \emph{(Must have)} 
 % FP2 - Tvorba barevných schémat
 % Aplikace vytváří na základě zvolené barvy další korespondující barevné palety
 % Priorita: Must have
+\paragraph{FP3 - Ukládání a vyhledávání barev} V aplikaci je možné ukládat identifikované barvy a vyhledávat již uložené v knihovně barev. \emph{(Must have)} 
 % FP3 - Ukládání a vyhledávání barev
 % V aplikaci je možné ukládat identifikované barvy a vyhledávat již uložené v knihovně barev.
 % Priorita: Must have
+\paragraph{FP4 - Odstranění barev z knihovny} Možnost mazat jednotlivé či více uložených barev. \emph{(Should have)} 
 % FP4 - Odstranění barev z knihovny
 % Lze odstranit uloženou barvu či více barev z knihovny
 % Priorita: Should have
