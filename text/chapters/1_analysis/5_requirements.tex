@@ -21,6 +21,10 @@ využíváme následující údaje dle. % https://moodle-vyuka.cvut.cz/pluginfil
     \end{enumerate}
 \end{itemize}
 
+Pžadavky se dělí na \textbf{funkční} a \textbf{nefunkční} požadavky. \textbf{Funkční požadavky} jsou takové požadavky, které
+definují chování systému. \textbf{Nefunkční požadavky} určují omezení informačního systému a mají dopad na zvolení architektury a dodržování standardů.
+Níže jsou vypsány veškeré požadavyk pro tuto práci i s popisem a určením priorit.
+
 \subsection{Funkční požadavky}
 \paragraph{FP1 - Identifikace barev} Aplikace rozpozná barvy podle kamery. \emph{(Must have)} 
 % FP1 - Identifikace barev 
@@ -38,47 +42,61 @@ využíváme následující údaje dle. % https://moodle-vyuka.cvut.cz/pluginfil
 % FP4 - Odstranění barev z knihovny
 % Lze odstranit uloženou barvu či více barev z knihovny
 % Priorita: Should have
+\paragraph{FP5 - Nápověda} Asistent pomáhající k lepší orientaci v aplikace. \emph{(Should have)} 
 % FP5 - Nápověda
 % Aplikace disponuje asistentem pro orientaci v aplikaci
 % Priorita: Should have
+\paragraph{FP6 - Vizualizace identifikované barvy} Extrahovaná barva je zobrazena na bodě detekce v kameře. \emph{(Must have)} 
 % FP6 - Vizualizace identifikované barvy
 % Extrahovaná barva je zobrazená v aplikaci
 % Priorita: Must have
+\paragraph{FP7 - Interakce v rozšířené realitě} Vytvoření virtuálního bodu za pomocí rozšířené reality. \emph{(Must have)} 
 % FP7 - Interakce v rozšířené realitě
 % Vytvoření virtuálního bodu za pomocí rozěířené reality
 % Priorita: Must have
+\paragraph{FP8 - Rozšířená interakce v AR} Vytvoření více virtuálních bodů v AR pro porovnání barev. \emph{(Could have)} 
 % FP8 - Rozšířená interkace v AR
 % Lze vytvořit více virtuálních bodů za pomocí AR pro porovnání barev
 % Priorita: Could have
+\paragraph{FP9 - Extrakce z fotografie} Extrakce barvy z fotografie. \emph{(Could have)} 
 % FP9 - Extrakce z fotografie
 % Extrakce barvy z fotografie
 % Priorita: Could have
+\paragraph{FP10 - Uložení vytvořeného snímku} Snímek z kamery lze uložit do zařízení. \emph{(Could have)} 
 % FP10 - Uložení fotografie do galerie
 % Vytvořenou fotografii z kamery lze uložit do galerie
 % Priorita: Could have
+\paragraph{FP11 - Míchání uložených barev} Aplikace vytváří další barvy z již uložených. \emph{(Will not have)} 
 % FP11 - Blending uložených barev
 % Aplikace může vytvářet další barvy z již uložených
 % Priorita: Will not have
+\paragraph{FP12 - Tvorba dalších barevných schémat} Aplikace vytváří další typy barevných palet. \emph{(Will not have)} 
 % FP12 - Tvorba více barevných schémat
 % Aplikace umí vytvářet více barevných palet
 % Priorita: Will not have
 
 \subsection{Nefunkční požadavky}
+\paragraph{NP1 - Multiplatformní aplikace} Aplikace je vyvíjena pro iOS i Android platformy. \emph{(Must have)} 
 % NP1 - Multiplatformní aplikace
 % Aplikace je vyvíjena pro iOS i Android platformy.
 % Priorita: Must have
+\paragraph{NP2 - Použití rozěířené reality} Využívají se komponenty z AR - interakce se světem, umístění objektů. \emph{(Must have)} 
 % NP2 - Použití AR
 % Využívané komponenty z AR - interakce se světem, umístění objektů
 % Priorita: Must have
+\paragraph{NP3 - Přístupnost} Aplikace má jednoduché UI a je přístupná všeobecnému publiku včetně osob s poruchami barevného vidění. \emph{(Must have)} 
 % NP3 - Přístupnost
 % Aplikace má jednoduché UI a je přístupná všeobecnému publiku včetně osob s poruchami barevného vidění.
 % Priorita: Must have
+\paragraph{NP4 - Rozšiřitelnost} Aplikaci lze dále jednoduše rozšiřovat v rámci tvorby dalších palet či větší interakce s extrahovanými barvami. \emph{(Should have)} 
 % NP4 - Rozšiřitelnost
 % Aplikaci lze dále jednoduše rozšiřovat v rámci tvorby dalších palet či větší interakce s extrahovanými barvami.
 % Priorita: Should have
+\paragraph{NP5 - Výkon} Aplikace lokálně funguje plynule bez sekání a prodlev, detekce je rychlá bez významného zaznamenání při používání. \emph{(Must have)} 
 % NP5 - Výkon
 % Aplikace lokálně funguje plynule bez sekání a prodlev, detekce je rychlá bez významného zaznamenání při používání.
 % Priorita: Must have
+\paragraph{NP6 - Technická dostupnost} Aplikace je dostupná pro modely Apple iPhone 8 a vyšší a Android zařízení se systémem Android 7.0 a vyšší (s ARCore podporou). \emph{(Should have)} 
 % NP6 - Technická dostupnost
 % Aplikace je dostupná pro modely Apple iPhone 8 a vyšší a Android zařízení se systémem Android 7.0 a vyšší (s ARCore podporou)
 % Priorita: Should have
