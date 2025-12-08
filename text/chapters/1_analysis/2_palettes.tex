@@ -1,6 +1,57 @@
-\section{Barevné sady a tvorba barevných palet}
+\section{Barevné systémy a tvorba barevných palet}
 %https://dspace.cuni.cz/bitstream/handle/20.500.11956/188964/130380558.pdf?sequence=1
 % krátká zmínka o historických paletách - jen o jejich existenci a posunutí oproti těm od goetheho a Newtona
 % barevne system, reprezentace (aditivni apod) RGB, CMYK - https://naos-be.zcu.cz/server/api/core/bitstreams/830d5224-cbd9-42c3-af0d-3ff9dd034966/content
 % https://www.premocz.eu/barvy-rgb-cmyk-a-pantone
 % https://www.shutterstock.com/blog/color-scheme-definitions-types-examples
+V kapitole Barevné systémy a tvorba barevných palet si představíme základní používané palety,
+se kterými se lze setkat nejen v uměleckém odvětví, ale také v každodenním životě. Různé barevné prostory
+se hodí k rozdílným účelům. Jeden je vhodný pro zobrazení na monitoru počítače, další je lepší z hlediska výsledků tisku.
+
+\subsection{Míchání barev}
+Existují dva základní přístupy pro získávání barev, a sice aditivní (součtové) a substraktivní (odčítací).
+Jejich primární rozdíl je zdroj světla, kdy v principu aditivním se jedná o míchání světla přímo ze zdroje, 
+substraktivní princip naopak pracuje s odrazem světla od povrchu.~\cite{Mikolasova2014}
+
+\paragraph{Aditivní míchání}\mbox{}\\
+Při aditivním míchání se sčítají různě barevná světla s různou intenzitou. Primárními barvami jsou červená, modrá a zelená. 
+Tímto principem lze získat veškeré barvy viditelné části spektra, při smíchání všech světel se stejnou intenzitou dosáhnete
+bílé barvy. Při jejich úplné absenci je výsledkem černá.~\cite{Mikolasova2014}
+
+\paragraph{Substraktivní míchání}\mbox{}\\
+Substraktivní princip vychází z práce malířů s barvami. Každý pigment pohlcuje i odráží určitou
+část světla a při odrazu dochází k odečítání jednotlivých složek. Čím více tedy barevných pigmentů přidáme,
+tím tmavší výsledek získáme. Základem je bílá barva, ke které se nanášejí další. Vzájemným překrýváním
+primárních barev získáváme další nové barvy. Zde jsou primárními barvami azurová, purpurová a žlutá.~\cite{Mikolasova2014}
+
+% TODO obrázek
+
+\subsection{Základní barevné systémy}
+V této sekci si představíme základní systémy, kterými lze vyjádřit určité množství barev. Ačkoliv jich existuje
+více, představíme si pouze ty relevantní pro naši práci, a to RGB, CMYK a HSV. Poslední část se bude věnovat také
+systému Pantone.
+
+\subsubsection{RGB}
+RGB systém je jedním z nejznámějších systému, které vychází z vnímání barev lidským okem. Jeho název vychází z názvů základních složek,
+červená (R), zelená (G) a modrá (B). Řadí se mezi aditivní systémy a je využit primáně pro obrazovky počítačů,
+smartphonů a dalších monitorů. Každá složka disponuje 256 stupni intenzity (0-255), tedy pro získání černé je R, G i B rovno 0, naopak
+pro bílou je nutné, aby R, G i B bylo rovno 255. Pro získání například šedé můžeme R, G i B nastavit na 100.~\cite{Mikolasova2014}
+
+Problém nastává při tisku. Barvy míchá rozdílným způsobem, a tedy při získání informace od počítače je třeba pracovat s odlišným systémem~\cite{premocz}.
+Ze systému RGB vychází další prostory vytvořené společnostmi pro lepší zpracování tiskárnami. Adobe RGB vytváří většinu barev, které zvládne CMYK, avšak při použití
+RGB. Je tedy schopen získat přibližně 50 \% všech viditelných barev. Dále existuje například ProPhoto RGB od společnosti Kodak s větším gamutem, či sRGB od firem
+Microsoft a Hewlett-Packard. sRGB je standardní paletou pro HTML a je hojně využíván v oblasti fotografií~\cite{Mikolasova2014}.
+
+\subsubsection{CMYK}
+CMYK využívá oproti RGB substraktivní metodu míchání a název vychází z barev nejčastěji využívaných tiskárnami: azurová (Cyan), purpurová (Magenta),
+žlutá(Yellow) a černá (Značena jako "Key" doplňující kontrast). Dokáže však vyproduktovat pouze omezené množství barev, proto se také nabízejí barvy do tiskáren
+s vlastními odstíny. Oproti monitoru není výsledek tak jasný a barevný.~\cite{premocz}
+
+\subsubsection{HSV}
+Model HSV je specifikován třemi hodnotami. Barevný tón (Hue) definovaný ve stupních, sytost (Saturation), která určuje odstín, a jas (Value) specifikující 
+hodnotu bílého světla. Systém je využíván ke konkrétnějšímu popisu barev a velikou výhodou je jeho nezávislost na zařízení. Naopak nevýhodou je neplynulý barevný přechod.~\cite{Mikolasova2014}
+
+\subsubsection{Pantone}
+Proto, aby například firmy měly stoprocentní jistotu, že jejich logo bude mít zcela identickou barvu, ať už je tisknuté kdekoliv, slouží Pantone. Jedná se o
+standardizovaný vzorník barev, jenž vznikl v roce 1963. Obsahuje 1867 barev včetně metalických a reflexních odstínů. Vychází ze 16 barev, z nichž jsou přesně odměřeny
+poměry barev pro objektivní výsledek.~\cite{premocz}
