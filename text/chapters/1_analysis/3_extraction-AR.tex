@@ -1,7 +1,46 @@
-\section{Extrakce informace z fotografie a AR}
-% https://scholar.google.com/scholar_lookup?journal=PLoS%20One&title=Accurate%20device-independent%20colorimetric%20measurements%20using%20smartphones.&author=M%20Nixon&author=F%20Outlaw&author=TS%20Leung&volume=15&issue=3&publication_year=2020&pages=e0230561&pmid=32214340&doi=10.1371/journal.pone.0230561&
-% pro focení z kamery pro nejvyšší věrohodnost
-% https://pmc.ncbi.nlm.nih.gov/articles/PMC10270580/?utm_source=chatgpt.com 
-% extrakce barev z kamery, barevná korekce
-% file:///C:/Users/sarka/Downloads/13254-Article%20Text-15623-1-10-20231226%20(2).pdf 
-% aplikace pro barvoslepé - popis dalších možných řešení
+\section{Rozšířená realita a její využití}
+Rozšířená realita ("AR") je definována jako integrace digitálních informací do prostředí uživatele
+v reálném čase. Technologie rozšířené reality překrývá obsah reálného světa a obohacuje jeho vnímání bez
+nahrazování reality samotné.~\cite{ibm_augmented_reality}
+
+\subsection{Virtuální realita vs rozšířená realita}
+Virtuální realita i rozšířená realita jsou v digitálním světě již poměrně známé a jejich využití
+je na vzestupu. Oba procesy však fungují velmi odlišně, proto je třeba ujasnit si rozdíly mezi těmito 
+výrazy a konkrétněji definovat jejich využití.
+
+Systémy rozšířené reality, jak je již definování výše, začleňují digitální informace do reálného světa, ale samotné
+vnímání reality nijak nemění. Naopak virtuální realita ("VR") je popisována jako trojrozměrný svět generovaný počítačem.
+Simuluje tedy prostředí vnímané uživazelem a umožňuje s ním interagovat, a tedy simulovat jeden či více smyslů. Fúze obou 
+principů se nazývá "mixed reality".~\cite{gaol_frontiers_ar_mr_education_2022}
+
+\subsection{Princip fungování}
+Zařízení využívající rozšířenou realitu nejprve přijímá videosignál ze zorného pole uživatele (např. kamery) a snímá
+okolní prostředí a fyzické objekty v tomto poli. Může to taktéž zahrnovat sběr dat z GPS, laserů či gyroskopů.
+
+Software rozšířené reality zpracovává a skenuje toto přijímané prostředí. Snaží se identifikovat objekty a vlastnosti prostředí, které
+by bylo možné rozšířit. Tato identifikace může potenciálně využívat umělou inteligenci k rozpoznání objektů či různé senzory.
+
+Ze softwaru pokračují informace zpět do zařízení, kde je generovaný obsah překrýván do zorného pole uživatele, a to ve správné perspektivě
+a orientaci. Pro interakci je možné využívat příkazy prostřednictvím fyzických gest, hlasu či dotykem obrazovky.
+
+\subsection{Možnosti využití}
+Dnes existuje mnoho možností, jak využívat rozšířenou realitu. V případě vzdělávání je možné zpřístupnit studentům lepší porozumění látky
+pomocí různých 3D modelů a simulací. To může například zahrnovat prozkoumávání historických budov, či dokonce celých, dnes již neexistujících měst.
+
+Její využití však lze objevit i v herním průmyslu, kde se herní charaktery a postavy objevují v reálném světě. Příkladem může být známá aplikace
+Pokemon GO, která umožňuje uživatelům dosáhnout ještě větší interakce se světem, čímž pomáhá ještě intenzivnějšímu prožitku ze hry.
+
+Ve zdravotnictví existují AR systémy pro trénink, plánování operací pro preciznější výsledky a vzdělávání pacientů. Rozšířená realita tedy rozhodně neslouží
+pouze pro zábavní průmysl, může sloužit také jako podpora v oblastech, kde by vytvoření fyzického objektu znamenalo nereálné výdaje či čas na realizaci.
+
+\subsection{Druhy rozšířené reality}
+Rozlišujeme dva základní typy rozšířené reality. Rozlišují se dle druhů spouštěčů na "marker-based" a "marker-less".
+
+\paragraph{Marker-based AR}\mbox{}\\
+"Marker-based AR" je realita založená na značkách, kterými jsou v tomto případě fyzické objekty vytvářející nějaký fyzický spouštěč. Může jím být
+QR kód, obrázek či jiná, předem definovaná značka. Při její detekci se spustí požadovaná akce rozšířené reality. Tento typ je dostupný bez omezení a je
+velmi flexibilní. Zároveň je méně nákladná.
+
+\paragraph{Marker-less AR}\mbox{}\\
+"Marker-less AR" nevyžaduje narozdíl od předchozího typu žádný konkrétní spouštěč. Spoléhá na určené senzory, jakými může být GPS, akcelerometr či kamera, mapuje prostředí
+v reálném čase a snaží se mu porozumět. Pomocí různých algoritmů a strojového vidění AR sama určuje umístění digitálního obsahu, zajišťující tím dynamičtější a spontánnější zážitek.~\cite{ibm_augmented_reality}
