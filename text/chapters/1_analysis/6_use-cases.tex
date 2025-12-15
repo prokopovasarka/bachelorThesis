@@ -1,9 +1,48 @@
 \section{Model případu užití}
+Model případů užití prezentuje využití funkčních požadavků na konkrétních případech, čímž pomáhá
+vysvětlit požadované funkcionality a poskytuje pro ně detailnější popis, tedy případy užití. Model případů užití je tvořen
+seznamem aktérů a diagramem případů užití, které jsou níže popsány.~\cite{analyza_a_sber}
+
+\subsection{Seznam případů užití}
+
+
+\paragraph{UC1. Detekce barvy z kamery}\mbox{}\\
+Po rozkliknutí "Camera" v hlavním menu se uživateli zobrazí kamera a v horní části nejprve dojde k inicializaci.
+Ve chvíli, kdy je kamera připravena, lze kliknout na požadovaný objekt, který vygeneruje objekt na místě stisku spolu s informačním
+boxem s názvem barvy, ukázkou a přesným kódem. Pro detekce jiné barvy stačí opět kliknout na místo, kde má barva být detekována.
+
+\paragraph{UC2. Detekce barvy z obrázku}\mbox{}\\
+Po rozkliknutí "Camera" v hlavním menu je možné v levém spodním rohu kliknout na ikonu galerie. Po povolení přístupu může uživatel
+vybrat požadovanou fotografii či obrázek ze své galerie, který je načten na obrazovku. Uživatel může libovolně vybírat stiskem místo pro
+určení barvy, kde se následně vytvoří orámované kolečko. Vybraná barva spolu se jménem a kódem se objeví na informačním boxu uprostřed obrazovky.
+
+\paragraph{UC3. Zobrazení detailu barvy}\mbox{}\\
+Pro zobrazení detailu barvy je možné zvolit dva postupy. První po výběru a detekci barvy z kamery či obrázku, a to kliknutím
+na obrázek palety ve spodní části aplikace. Druhým způsobem je výběr "Library" v hlavním menu a výběrem požadované barvy. Na stránce
+s detailem je zobrazena barva, její název, HEX, CMYK a HSV kód spolu s monochromatickou, analogickou a komplementární paletou.
+
+\paragraph{UC4. Uložení barvy}\mbox{}\\
+Po výběru barvy z kamery či obrázku je možné uložit zvolenou barvu do knihovny pomocí stisku ikony uložení vedle ikony galerie. Barva se následně
+objeví v sekci "Library", ke které má uživatel neomezený přístup.
+
+\paragraph{UC5. Prohlížení uložených barev}\mbox{}\\
+Uživatel může v sekci "Library" v hlavním menu získat přístup k celé knihovně barev uložených z kamery či obrázku. Pomocí posuvníku lze procházet barvy
+seřazené od posledního uložení po nejstarší.
+
+\paragraph{UC6. Smazání uložených barev}\mbox{}\\
+V sekci "Library" v hlavním menu získá uživatel přístup ke knihovně barev. Pro výběr barvy lze podržet stisk na požadovaném políčku, přičemž se ve vrchní části
+objeví tlačítka pro vymazání barvy či zrušení výběru. Uživatel takto může vybírat a mazat více barev najednou. Pro výběr více než jedné barvy stačí krátký stisk,
+při opětovném stisku je barva z výběru odebrána.
+
+\paragraph{UC7. Zobrazení nápovědy}\mbox{}\\
+Nápověda použití aplikace je uživateli zobrazena při prvním spuštění aplikace. V případě, že je nápověda vyžadována v průběhu používání,
+lze ji najít v sekci "Help" v hlavním menu. Nápověda obsahuje plnohodnotný návod na používání aplikace včetně vizuálního doprovodu.
+
 
 \subsection{Diagram případů užití}
-% Modelové situace vizualizující funkční požadavky
-% uživatel - Použití nápovědy, identifikace barvy, uložení fotografie, uložení a odstranění barvy, vyhledání barvy,
-% umístění objektu do AR, získání barevných schémat
-
-\subsection{Popis případů užití}
-
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/diagram.png}
+    \caption{Diagram případů užití dle.~\cite{analyza_a_sber}}
+    \label{fig:Diagram případů užití}
+\end{figure}
