@@ -1,2 +1,64 @@
 \section{Stavový diagram}
-bubu
+Stavový diagram patří mezi využívané nástroje objektového modelování. Slouží k vizualizaci objektů
+v rámci jeho životního cyklu, tedy stavů, kterými prochází, a událostí způsobujících změnu stavu.~\cite{uml_stavovy_diagram} Pomocí stavového
+diagramu lze přesně popsat logiku chování systému napříč všemi případy užití~\cite{franek_objektove_metody_modelovani_5}. Komponentami diagramu jsou \textbf{Stav, Přechod stavu a Událost}~\cite{uml_stavovy_diagram}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\paperwidth, angle=90]{images/state_diagram.png}
+    \caption{Stavový diagram aplikace ColorLensAR, dle~\cite{uml_stavovy_diagram}.}
+    \label{fig:State_diagram}
+\end{figure}
+
+\subsection{Stav}
+Stav popisuje stav v životním cyklu objektů či interakce, ve které se stav nachází. Je vyznačena čtvercem se zaoblenými rohy
+a popsána názvem stavu. Může být doplněna o další vnitřní stavy, které může stav nabývat. Příkladem stavu pro objekt Student je:
+přihlášený, přijatý, zapsaný, apod. Speciálním případem stavů je počáteční a koncový stav.~\cite{uml_stavovy_diagram}
+
+Ve stavovém diagramu pro vyvíjenou aplikaci v této práci viditelným na \ref{fig:State_diagram}, který popisuje nejdůležitější funkcionality aplikace,
+definujeme následující stavy:
+
+\paragraph{START}
+Počáteční stav popisující první spuštění aplikace.
+\paragraph{HELP}
+Zobrazení nápovědy pro používání aplikace při přrvním spuštění aplikace.
+\paragraph{MAIN}
+Obrazovka hlavního menu.
+\paragraph{AR\_CAMERA, PHOTO}
+Stavy, ve kterých může uživatel vybírat barvu, buď z fyzického prostoru pomocí AR nebo z obrázku z galerie.
+\paragraph{AR\_COLOR, PHOTO\_COLOR}
+Stav popisující moment detekování barvy a výpis informací o barvě v boxu, přesněji název a kód.
+\paragraph{GALLERY}
+Stav, při němž probíhá výběr fotografie či obrázku z galerie fotoaparátu.
+\paragraph{COLOR\_DETAIL}
+Obrazovka s detailními informacemi o zvolené barvě. Pozadí je určené dle zvolené barvy, na obrazovce se nachází název barvy, HSV, CMYK a HEX kód a
+monochromatická, komplementární a analogická paleta.
+\paragraph{LIBRARY}
+Obrazovka s knihovnou uložených barev, zobrazuje uložené barvy v orámovaném čtverci se zaoblenými rohy.
+\paragraph{MULTI\_SELECT}
+Stav, při kterém uživatel vybral v knihovně barev jednu či více barev.
+
+\subsection{Přechod stavů}
+Přechod stavů popisuje vztah mezi dvěma stavy, přesněji přechod z prvního stavu do druhého. Změna stavu proběhne při splnění podmínky a
+značí se šipkou z jednoho stavu do druhého a jeho popisem.
+
+\subsection{Událost}
+Událost se stane v určitém časovém okamžiku, nemá trvání, například po uplynutí času či splnění podmínky.
+
+Ve stavovém diagramu pro vyvíjenou aplikaci v této práci viditelným na \ref{fig:State_diagram}, který popisuje nejdůležitější funkcionality aplikace,
+definujeme následující události v přechodech stavů:
+
+\paragraph{První spuštění aplikace}
+Přechod z počátečního stavu do stavu START při prvním spuštění aplikace.
+
+\paragraph{Klik na \{název prvku\}}
+Přechod popisuje akci kliknutí na prvek v aplikace. Prvkem může být tlačítko, ikona, text, zpětné tlačítko či čtverec s barvou v knihovně.
+
+\paragraph{Vybrat fotografii/obrázek z galerie}
+Přechod z GALLERY do PHOTO po vybrání obrázku či fotografie z galerie fotoaparátu.
+
+\paragraph{Klik v prostoru}
+Kliknutí ve stavu AR\_CAMERA na místo v prostoru pro získání informace o barvě.
+
+\paragraph{Dlouhé podržení}
+Přechod z LIBRARY do MULTI\_SELECT dlouhým přidržením jedné z barev.
