@@ -1,2 +1,65 @@
 \section{Technologie}
 % react native, Viro AR, Expo
+\subsection{Nativní vs multiplatformní vývoj}
+Nativní aplikace jsou vyvíjeny pro konkrétní platformu, typicky pro iOS od firmy Apple či Google Android. V závislosti na
+zvolené platformě je volen také specifický programovací jazyk. Pro iOS lze využít například Objective-C či Swift, pro Android je
+využívána Java či Kotlin.
+
+Mezi výhody vývoje nativní aplikace patří vysoký výkon a plynulost způsobené optimalizací pro danou platformu. Zároveň je jednodušší
+přístup k nativním funkcím, jakými jsou například kamera či GPS, a díky přízpůsobení UX/UI konkrétní platformě stoupá spokojenost uživatelů.
+
+Nevýhody vývoje nativních aplikací jsou primárně vyšší náklady a delší vývoj vzhledem k nutnosti vývoje samostatných verzí pro platformy. Zároveň
+jsou vyšší nároky na údržbu a aktualizaci verzí.
+
+Cíl multiplatformních aplikací je vývoj pro více platforem najednou za využití jednoho frameworku. Cílem je hlavně rychlejší vytváření aplikací,
+významné snížení nákladů a umožňuje škálování. Využívají se moderní frameworky, jako například React Native, které dosahují vysokého výkonu i přívětivého
+uživatelského zážitku napříč platformami.
+
+Avšak i multiplatformní vývoj musí čelit různým problémům. Mezi nevýhody patří omezený přístup k některým nativním funkcím, možné problémy s kompatibilitou či
+nižší výkon u graficky náročných aplikací.
+
+V této bakalářské práci je vyvíjena multiplatformní aplikace. Hlavními důvody jsou větší možnosti testování i rozšiřitelnosti a velikost prostoru pro design. Aplikace taktéž
+vyžaduje přístup pouze k těm nativním funkcím, které jsou jednoduše přístupné na obou platformách, což výrazně ulehčuje její vývoj.~\cite{argo22_nativni_vs_multiplatformni}
+
+\subsection{Vývojové prostředí}
+Při vývoji multiplatformní aplikace, tedy aplikace dostupné pro systémy iOS i Android, případně také pro desktopové aplikace, je možné
+využít různá vývojová prostředí, taktéž neexistuje omezení pro operační systém. Je tedy možné aplikace vyvíjet na MacOS, Windows či Linux systémech. 
+Příkladem může být Visual Studio Code, Microsoft Visual Studio, Eclipse či Xcode.
+
+Přestože je vývoj multiplatformní aplikace obecně nezávislý na cílovém operačním systému, pro účely
+testování a ladění aplikace na zařízení se systémem iOS je nutné využít vývojové prostředí Xcode, jenž je vyžadováno
+platformou iOS. Ačkoliv samotný vývoj proběhne v prostředí Visual Studio Code kvůli jeho přívětivosti, Xcode sloužil jako klíčový prvek pro sestavení aplikace k jejímu
+úspěšnému spuštění.
+
+Pro vývoj aplikace v Xcode je vyžadováno vlastnictví zařízení Mac s operačním systémem MacOS. Xcode je integrované vývojové prostředí,
+které lze bezplatně využívat a nabízí podporu velkého množství programovacích jazyků včetně C, C++, Python a další~\cite{ekren_what_is_xcode}.
+
+\subsection{Výběr frameworku}
+K vývoji multiplatformních aplikací existuje několik frameworků nabízejících různé funkcionality, které usnadňují a zrychlují proces vývoje aplikací. Výběr frameworku
+může být ovlivněn programovacím jazykem, výběrem knihoven či možnostmi integrace. Mezi nejznámější a nejrozšířenější frameworky patří
+Flutter, React Native a Kotlin Multiplatform.
+
+\paragraph{Flutter}\mbox{}\\
+Flutter je framework vhodný pro mobilní i desktopové a webové aplikace. Využívá programovací jazyk Dart vytvořený společností Google a podporuje využití AR v aplikacích.
+Výhodou frameworku Flutter je možnost zobrazení modifikace aplikace bez nutnosti rekompilace, podporuje také Material Design systém poskytující různé
+komponenty a nástroje následující osvědčené postupy pro tvorbu uživatelského rozhraní.~\cite{kotlin_multiplatform_cross_platform_frameworks}
+
+\paragraph{Kotlin Multiplatform}\mbox{}\\
+Kotlin Multiplatform je open-source technologie vytvořená JetBrains kombinující výhody nativního vývoje s možnostmi vývoje multiplatformních aplikací.
+Využívá programovací jazyk Kotlin a jeho největší výhodou je možnost využívání kódu napříč platformami, možnost psaní nativního kódu a snadná integrace
+do jakéhokoliv projektu~\cite{pavlu_kotlin_multiplatform_stable}. Naproti tomu Kotlin Multiplatform nedisponuje podporou knihoven pro rozšířenou realitu.
+
+\paragraph{React Native}\mbox{}\\
+React Native je open-source UI framework vytvořen společností Meta Platforms. Využívá již rozšířený JavaScript/TypeScript a díky Fast Refresh funkci mohou vývojáři
+prohlížet změny v aplikaci ihned po vytvoření změny v komponentách. Zároveň se React Native soustředí na uživatelské rozhraní, čímž podporuje responzivní
+prostředí, které lze snadno přizpůsobit. Díky rozsáhlé komunitě usnadňuje vývoj aplikací a poskytuje velké množství~\cite{kotlin_multiplatform_cross_platform_frameworks}
+knihoven včetně knihoven rozšířené reality.
+
+\subsection{Shrnutí výběru frameworku}
+Pro vývoj této bakalářské práce je využit framework React Native, a to na základě několika faktorů. Prvním je využitý jazyk JavaScript/TypeScript, jenž je jednoduchý, responsivní
+a rozšířený, což usnadňuje celkový vývoj aplikace. Dalším důvodem je podpora knihoven rozšířené reality a rychlé projevení změn při psaní kódu.
+
+\subsection{Expo}
+Pro zjednodušení celkovéhop procesu vývoje je využit framework Expo, jenž je definován jako sada nástrojů a služeb postavených na React Native. Slouží
+k usnadnění pracovních postupů a poskytuje prostor vývojářům soustředit se na psaní samotného kódu bez nutnosti soustředit se na nastavení konfigurací a nativních nástrojů~\cite{sarwar_react_native_with_expo}.
+Expo slouží jako mezikrok mezi samotným vývojem v React Native a následným sestavením aplikace v Xcode.
