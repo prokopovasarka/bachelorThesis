@@ -9,9 +9,51 @@ aplikací včetně jejich způsobu komunikace. Následně budou shrnuty jejch v�
 těchto návrhových vzorů včetně určení nejvhodnějšího výběru pro aplikaci v této práci.
 
 \section{MVC}
+MVC, celým názvem "Model-View-Controller", rozděluje aplikaci do tří částí, každá reprezentující
+rozdílnou problematiku aplikace. Její popis je vyobrazen níže dle~\cite{tutorialspoint_mvc}.
+
+\paragraph{Model}
+Reprezentuje objekt nesoucí data. Může taktéž v sobě uchovávat logiku pro aktualizaci Controller části při aktualizaci
+dat.
+
+\paragraph{View}
+View vizualizuje data, které model obsahuje.
+
+\paragraph{Controller}
+Působí pro obě části, tedy jak pro Model, tak pro View. Stará se o tok dat do objektu a aktualizuje zobrazení, tedy
+View část, pokaždé, když dojde ke změně dat. udržuje zároveň separaci mezi Model a View.
+
 
 \section{MVVM}
+Model MVVM obsahuje tři hlavní komponenty: Model, View a ViewModel. ViewModel se stará o izolaci View od Model a umožňuje
+vývoj komponenty Model bez závislosti na View. Na vysoké úrovni však funguje komunikace mezi těmito komponentami a vzájemně
+se do určité míry ovlivňují. Popis MVVM vychází z~\cite{microsoft_maui_mvvm}.
+
+\paragraph{View}
+Zodpovídá za definování struktury a vizuálníá obsah viditelný uživateli. Neobsahuje obchodní logiku, kromě specifických případů,
+a lze být reprezentováno šablonou dat definující rozhraní.
+
+\paragraph{ViewModel}
+Implementuje příkazy a vlastnosti zajišťující vazbu dat na model View a upozorňuje jej na změnu stavu.
+Tyto příkazy definují funkce v uživatelském rozhraní a model View určuje formu jejich zobrazení.
+
+\paragraph{Model}
+Model zapouzdržuje data aplikace. Lze si jej představit jako reprezentaci doménového modelu aplikace zahrnující obchodní a ověřovací
+logiku zároveň. Je možné spojení s dalšími službami či úložišti zajišťující přístup k datům.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/mvvm-pattern.png}
+    \caption{Ukázka komunikace modelu MVVM dle~\cite{microsoft_maui_mvvm}.}
+    \label{fig:MVVM}
+\end{figure}
+
 
 \section{Component-based}
+Komponentová architektura je založená na opakovaně využitelných částech aplikace, kde každá komponenta má definovanou funkcionalitu, jenž
+je vložena do aplikace bez úpravy ostatních komponent. Dle zdroje~\cite{mendix_component_based_architecture} si lze komponentu představit jako kostku lega.
 
+Při stavbě struktury z kostek lega, v tomto případě aplikace, lze vybírat z různých tvarů, velikostí a barev, které představují její komponenty. Každá
+kostka má přitom své určení, například dveře, různé konstrukční prvky či okna. Ty lze dle jejich vlastností propojit s ostatními bloky, jejich přídání či 
+odebrání má přitom minimální dopad na strukturu. I v případě kompikovanějších programů je zachována alegorie, která popisuje koncept této architektury.
 
