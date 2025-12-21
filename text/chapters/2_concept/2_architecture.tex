@@ -8,7 +8,7 @@ Kapitola se zaměřuje na popis známých architektur a návrhových vzorů vyu�
 aplikací včetně jejich způsobu komunikace. Následně budou shrnuty jejch výhody a nevýhody. V závěru proběhne porovnání
 těchto návrhových vzorů včetně určení nejvhodnějšího výběru pro aplikaci v této práci.
 
-\section{MVC}
+\subsection{MVC}
 MVC, celým názvem "Model-View-Controller", rozděluje aplikaci do tří částí, každá reprezentující
 rozdílnou problematiku aplikace. Její popis je vyobrazen níže dle~\cite{tutorialspoint_mvc}.
 
@@ -24,13 +24,13 @@ Působí pro obě části, tedy jak pro Model, tak pro View. Stará se o tok dat
 View část, pokaždé, když dojde ke změně dat. udržuje zároveň separaci mezi Model a View.
 
 
-\section{MVVM}
+\subsection{MVVM}
 Model MVVM obsahuje tři hlavní komponenty: Model, View a ViewModel. ViewModel se stará o izolaci View od Model a umožňuje
 vývoj komponenty Model bez závislosti na View. Na vysoké úrovni však funguje komunikace mezi těmito komponentami a vzájemně
 se do určité míry ovlivňují. Popis MVVM vychází z~\cite{microsoft_maui_mvvm}.
 
 \paragraph{View}
-Zodpovídá za definování struktury a vizuálníá obsah viditelný uživateli. Neobsahuje obchodní logiku, kromě specifických případů,
+Zodpovídá za definování struktury a vizuální obsah viditelný uživateli. Neobsahuje obchodní logiku, kromě specifických případů,
 a lze být reprezentováno šablonou dat definující rozhraní.
 
 \paragraph{ViewModel}
@@ -49,11 +49,56 @@ logiku zároveň. Je možné spojení s dalšími službami či úložišti zaji
 \end{figure}
 
 
-\section{Component-based}
+\subsection{Component-based}
 Komponentová architektura je založená na opakovaně využitelných částech aplikace, kde každá komponenta má definovanou funkcionalitu, jenž
 je vložena do aplikace bez úpravy ostatních komponent. Dle zdroje~\cite{mendix_component_based_architecture} si lze komponentu představit jako kostku lega.
 
 Při stavbě struktury z kostek lega, v tomto případě aplikace, lze vybírat z různých tvarů, velikostí a barev, které představují její komponenty. Každá
 kostka má přitom své určení, například dveře, různé konstrukční prvky či okna. Ty lze dle jejich vlastností propojit s ostatními bloky, jejich přídání či 
-odebrání má přitom minimální dopad na strukturu. I v případě kompikovanějších programů je zachována alegorie, která popisuje koncept této architektury.
+odebrání má přitom minimální dopad na strukturu. Vývoj aplikací je sice náročnější proces, avšak i v případě kompikovanějších programů je tato analogie popisující
+koncept Component-base architektury relevantní.
 
+\subsection{Výhody a nevýhody zmíněných architektur}
+Po stručném popsání jednotlivých architektur a návrhových vzorů je třeba před závěrečným výběrem shrnout si
+jejich výhody a nevýhody. Nejprve následuje popis \textbf{výhod} plynoucích z využívání jednotlivých architektur.
+
+\paragraph{MVC}
+MVC umožňuje oddělení uživatelského rozhraní od dat. Tím usnadňuje změnu a další vývoj jednotlivých částí, aniž by 
+zasahovaly jedna do druhé. Program je tak lépe rozčleněn, funkcionality se navzájem nepřekrývají a je jasně určená zodpovědnost každé z nich.~\cite{shakuro_mvc_vs_mvvm}
+
+\paragraph{MVVM}
+Ačkoliv je MVVM velmi podobný MVC, nabízí určité výhody, které MVC ve svém modelu nezakomponovává. MVVM podporuje vazbu dat mezi View a ViewModel,
+podporuje vytváření více vztahů mezi nimi a usnadňuje Unit testování. Obchodní logika je navíc zcela oddělená od UI.~\cite{shakuro_mvc_vs_mvvm}
+
+\paragraph{Component-based}
+Komponenty lze znovu využívat bez nutnosti jejich změny napříč aplikací, ale také napříč různými projekty. Systémy mohou být jednoduše rozšiřovány a komponenty
+snadno modifikovány s minimálním zásahem do celku. Kód je zároveň díky přesnému specifikování každé komponenty organizovanější a umožňuje vytvářet čistou
+strukturu.~\cite{mendix_component_based_architecture}
+\mbox{}\\\mbox{}\\
+Každý model však skýtá i určité nevýhody jeho využití.
+
+\paragraph{MVC}
+Nevýhodou MVC je zásah obchodní logiky do UI a těžší implementace testů. MVC je starší model, a tedy jeho používání může být v kontextu
+moderních uživatelských rozhraní obtížné.~\cite{guru99_mvc_vs_mvvm}
+
+\paragraph{MVVM}
+Architektura MVVM není vhodná architektura pro projekty s jednoduchým UI vzhledem k jeho komplexnosti. Zároveň je náročné správně navrhnout ViewModel, což by 
+mohlo vyústit k vysokému počtu bloků s duplicitním kódem.~\cite{gossman2006advantages}
+
+\paragraph{Component-based}
+Vzhledem k vytváření oddělených komponent, Component-based architektura přidává do systému vyšší komplexitu. Každá její komponenta musí být přesně definována, 
+vyvinuta a spravována, což může vyústit k složitým vzájemným závislostem. Pokud jsou zároveň různé komponenty vyvíjeny různými týmy či s rozdílnými technologiemi, může
+jejich integrace představovat další překážku.~\cite{sakovich2025componentbased}
+
+\subsection{Shrnutí a výběr architektury}
+Po shrnutí výhod a nevýhod všech zmíněných architektur jsme získali lepší obrázek o tom, jak každá funguje a k jakému účelu slouží. Nyní proto můžeme vybrat 
+architekturu nejvhodnější pro náš projekt.
+
+Náš projekt nedosahuje takových rozměrů, aby bylo vhodné pro něj využít vzor MVVM. Zároveň jeho obousměrný tok dat může v některých případech způsobit neočekávané vedlejší efekty. 
+Proto je třeba hledat jednodušší řešení a vyvarovat se těm, které by mohly způsobit nadbytečné komplikace.
+
+MVC je sice vhodný pro projekty se stejnými rozměry, jako má tato práce, avšak vhodnější volbou je Component-based architektura, a to z několika následujících důvodů. MVC často vyžaduje explicitní instrukce
+při změně modelu pro aktualizaci View, zároveň s růstem aplikace začíná být zajišťování závislostí a udržování oddělení částí mnohem náročnější. Component-based architektura je založena na dynamičnosti
+a její velkou výhodou, jak již bylo zmíněno v předchozí podsekci, je právě možnost rozšiřitelnosti s minimálním dopadem na celý systém.
+Dle~\cite{reactnative_components} je React Native založený na komponentách a kromě základních a nativních komponent existují i další, vytvořené komunitou. Můžeme 
+tedy říci, že pro zájmy této práce a v souladu se standardními postupy v softwarovém inženýrství byla vybrána správná architektura pro vyvíjenou aplikaci a můžeme pokračovat k poslední části návrhu.
