@@ -7,44 +7,68 @@ Následující podsekce popisují jednotlivé části aplikace doplněné o wire
 daného uživatelského rozhraní. Návrh poslouží jako předloha pro implementaci.
 
 \subsection{První spuštění}
+Po prvním spuštění aplikace se uživatel nachází na úvodní obrazovce s nápovědou, která vysvětluje, jak aplikaci používat a jak se
+zorientovat. Je složená z textu s vizuálním doprovodem. Poté lze nápovědu ukončit stisknutím spodního tlačítka,
+který uživatele dovede na hlavní obrazovku s menu, viz \ref{fig:first_wireframe}.
+
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.9\linewidth]{images/first_wireframe.jpg}
+    \includegraphics[width=0.8\linewidth]{images/first_wireframe.jpg}
     \caption{Wireframe obrazovky s nápovědou při prvním spuštění a hlavního menu.}
     \label{fig:first_wireframe}
 \end{figure}
 
 \subsection{Camera}
+Z domovské stránky může uživatel pokračovat na stránku s kamerou z hlavního menu, které je záměrně ponecháno minimalistické. Tlačítka jsou velká a jasně označená
+textem navigace. V kameře je jasně označené, zda lze tlačítko použít, dle jeho průhlednosti. Vybledlá tlačítka nelze stisknout. Jsou popsané buď slovně dle akce, kterou uživatel 
+může provést, nebo prezentovány pomocí ikon reprezentující akci napříč platformami. Vzhled je volen na základě osvědčených postupů a snaží se zachovat 5. pravidlo Nielsenova desatera dle~\cite{nielsen2024ten}, které
+popisuje konzistentnost a dodržování konvencí platformy i celého průmyslu. Příkladem je ikona galerie či zpětné tlačítko v levném horním rohu, které uživatele zavede vždy na předchozí stránku.
+
+Při zvolení barvy je vyobrazen zvolený bod spolu s poloprůhledným boxem obsahující čtverec s detekovanou barvou, název a kód barvy. Vzhled boxu je zachován, ať už v případě AR kamery či při 
+detekci barvy z fotografie/obrázku z galerie. 
+
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.9\linewidth]{images/camera_wireframe.jpg}
+    \includegraphics[width=0.8\linewidth]{images/camera_wireframe.jpg}
     \caption{Ukázka obrazovek při spuštění Camera.}
     \label{fig:cam_wireframe}
 \end{figure}
 
 \subsection{Library}
+Z hlavní obrazovky je možné přistoupit na stránku s knihovnou uložených barev. Knihovna vyobrazuje čtverce s definovaným tvarem, je zachováno minimalistické prostředí. Při výběru barev je
+zjevné ohraničení zvolených barev. Při odebrání výběru je ohraničení zrušeno. Ve spodní části se nachází dvě tlačítka s jasně popsanou akcí pomocí textu, tedy buď vymazání barev či odebrání označení u všech barev.
+Levé zpětné tlačítko je zachováno napříč celou aplikací jednotně.
+
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.9\linewidth]{images/library_wireframe.jpg}
+    \includegraphics[width=0.8\linewidth]{images/library_wireframe.jpg}
     \caption{Ukázka obrazovek v knihovně barev.}
     \label{fig:lib_wireframe}
 \end{figure}
 
 \subsection{Detail}
+Obrazovka detail je dostupná při kliknutí na barvu v knihovně či při kliknutí na ikonu palety v kameře po zvolení barvy. Detail vyobrazuje barvu spolu se jménem a dalšími
+kódy popisující barvu. Ve spodní části se nachází tři palety, které jsou jasně popsané názvem palety a ohraničené pro lepší odlišení od pozadí.
+
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.5\linewidth]{images/detail_wireframe.jpg}
+    \includegraphics[width=0.4\linewidth]{images/detail_wireframe.jpg}
     \caption{Ukázka obrazovky vyobrazující detail o barvě.}
     \label{fig:detail_wireframe}
 \end{figure}
 
 \subsection{Help}
+Kromě prvního spuštění je možné vstoupit do obrazovky s nápovědou z hlavní obrazovky. Struktura je zachována pro dodržení konzistence, text je doprovázen vizuály pro vyšší atraktivitu.
+Spodní tlačítko je nahrazeno zpětným tlačítkem v levém horním rohu, stejně jako je tomu ve zbytku aplikace.
+
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.9\linewidth]{images/help_wireframe.jpg}
+    \includegraphics[width=0.8\linewidth]{images/help_wireframe.jpg}
     \caption{Ukázka obrazovky při spuštění nápovědy.}
     \label{fig:help_wireframe}
 \end{figure}
+
+\subsection{Shrnutí návrhu uživatelského rozhraní}
 
 
 
