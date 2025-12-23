@@ -25,7 +25,8 @@ může provést, nebo prezentovány pomocí ikon reprezentující akci napříč
 popisuje konzistentnost a dodržování konvencí platformy i celého průmyslu. Příkladem je ikona galerie či zpětné tlačítko v levném horním rohu, které uživatele zavede vždy na předchozí stránku.
 
 Při zvolení barvy je vyobrazen zvolený bod spolu s poloprůhledným boxem obsahující čtverec s detekovanou barvou, název a kód barvy. Vzhled boxu je zachován, ať už v případě AR kamery či při 
-detekci barvy z fotografie/obrázku z galerie. 
+detekci barvy z fotografie/obrázku z galerie. Pro udržení informovanosti uživatele dle doporučení číslo 1 v~\cite{nielsen2024ten} je v horní části obrazovky připraven text s aktuálním statusem určující, 
+zda je aktuálně detekována barva, zda je kamera připravena či probíhá načítání.
 
 \begin{figure}[!ht]
     \centering
@@ -58,8 +59,8 @@ kódy popisující barvu. Ve spodní části se nachází tři palety, které js
 \end{figure}
 
 \subsection{Help}
-Kromě prvního spuštění je možné vstoupit do obrazovky s nápovědou z hlavní obrazovky. Struktura je zachována pro dodržení konzistence, text je doprovázen vizuály pro vyšší atraktivitu.
-Spodní tlačítko je nahrazeno zpětným tlačítkem v levém horním rohu, stejně jako je tomu ve zbytku aplikace.
+Kromě prvního spuštění je možné vstoupit do obrazovky s nápovědou z hlavní obrazovky. Struktura je zachována pro dodržení konzistence, text je doprovázen vizuály pro vyšší atraktivitu
+a zřejmost informací. Spodní tlačítko je nahrazeno zpětným tlačítkem v levém horním rohu, stejně jako je tomu ve zbytku aplikace. Wireframe obrazovky je vyobrazen na~\ref{fig:help_wireframe}.
 
 \begin{figure}[!ht]
     \centering
@@ -69,6 +70,10 @@ Spodní tlačítko je nahrazeno zpětným tlačítkem v levém horním rohu, ste
 \end{figure}
 
 \subsection{Shrnutí návrhu uživatelského rozhraní}
-
+Uživatelské rozhraní aplikace zachovává konzistenci napříč všemi obrazovkami, má jednotný design, barvy i fonty. Pomocí
+známých a jasně rozpoznatelných ikon a textu jasně popisuje akce, které uživatel může vykonávat, aby zachoval využívané standardy a dle pravidla 6 v~\cite{nielsen2024ten}
+bylo minimalizováno využití paměti.
+Návrh uživatelského rozhraní pomohl uzavřít kapitolu o návrhu aplikace. Ten zahrnuje také výběr architektury včetně popsání alternativ spolu s porovnáním a výběrem technologií, a to 
+za dodržení běžných postupů softwarového inženýrství pro splnění bodů vyplývajících ze zadání této práce. 
 
 
