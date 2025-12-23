@@ -1,1 +1,134 @@
 \section{Ukázky implementace}
+V následujících řádcích jsou prezentovány významné části implementace vyvíjené aplikace, jejich popis spolu
+s ukázkami zdrojových kódů.
+
+Implementace se řídí architekturou stanovenou v návrhu a splňuje funkční i nefunkční požadavky uvedené při analýze. 
+Sekce je tedy dle využité Component-based architektury rozdělená na popis jednotlivých komponent důležitých pro fungování celé 
+aplikace.
+
+\subsection{App}
+Komponenta \texttt{App} představuje vstupní komponentu celé vyvíjené aplikace. Hlavním cílem je inicializace navigace a umožňuje 
+obrazovkám mít přístup k navigaci. Je nutná pro fungování knihovny \texttt{@react-navigation}.
+
+\begin{verbatim}
+<NavigationContainer>
+      <RootStack />
+</NavigationContainer>
+\end{verbatim}
+
+\subsection{RootStack a HomeScreen}
+\texttt{RootStack} definuje navigaci celé aplikace pomocí \texttt{createNativeStackNavigator}. Výchozí obrazovkou je \textbf{Home}, 
+další obrazovky jsou Camera, Library, Help a ColorDetail. Navigace je vytvořena formou zásobníku \texttt{Stack.Navigator}, každá obrazovka
+má vlastní hlavičku. \texttt{HomeScreen} kontroluje, zda se jedná o první spuštění aplikace, či zda byla aplikace v minulosti
+již spuštěna, dle této podmínky přesměruje uživatele na \texttt{Help} či \texttt{HomeScreen}.
+
+\begin{verbatim}
+React.useEffect(() => {
+    const checkFirstLaunch = async () => {
+      const alreadyLaunched = await AsyncStorage.getItem('alreadyLaunched');
+      if (alreadyLaunched === null) {
+        await AsyncStorage.setItem('alreadyLaunched', 'true');
+        navigation.replace('Help'); 
+      }
+    };
+    checkFirstLaunch();
+}, []);
+\end{verbatim}
+
+Obrázek \ref{fig:HomeScreen} zobrazuje úvodní stránku \texttt{HomeScreen} se zobrazením navigace a 
+vzhled obrazovky s hlavičkou \texttt{header} definovanou pro všechny obrazovky v \texttt{RootStack}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/implementation_1.jpg}
+    \caption{Ukázka implementace úvodní obrazovky \texttt{HomeScreen} a knihovny \texttt{Library}.}
+    \label{fig:HomeScreen}
+\end{figure}
+
+\subsection{CameraScreen}
+Tato část zajišťuje výběr barev z prostoru a jejich vizualizaci v prostoru. Má na starost práci s kamerou, galerií
+a perzistentním ukládáním dat. CameraScreen je hlavní obrazovka kamery. Řídí zároveň komunikaci s AR scénou.
+
+Funkce \texttt{handleTap} zjišťuje pozici kliknutí uživatele, následně se snaží z detekovat barvu pixelu, buď na základě vybrané fotografie
+z galerie nebo pomocí \texttt{CaptureRef}, která vytvoří dočasný snímek kamery pro získání pixelu. Díky knihovně
+\texttt{react-native-pixel-color} lze získat HEX kód barvy. Následně aktualizuje status.
+
+\begin{verbatim}
+const handleTap = async (e: any) => {
+    const px = PixelRatio.get();
+    const x = Math.round(e.nativeEvent.locationX * px);
+    const y = Math.round(e.nativeEvent.locationY * px);
+    setTapPos({ x: e.nativeEvent.locationX, y: e.nativeEvent.locationY });
+
+    try {
+      const tag = findNodeHandle(viewRef.current);
+      if (!tag) throw new Error("View ref not found");
+      const uri = capturedPhoto || (await captureRef(tag, { format: "png", quality: 1 }));
+      const color = await PixelColor.getHex(uri, { x, y });
+      await placeAtPointRef.current?.(x, y, color);
+
+      setSelectedColor(color);
+      setStatus("Color selected");
+    } catch (err) {
+      console.warn("Pixel read error:", err);
+      setStatus("Pixel read failed");
+    }
+};
+\end{verbatim}
+
+\texttt{CameraScreen} se stará taktéž o vytvoření a uložení fotografie. V případě snímání kamery funkce \texttt{takePhoto} vytvoří pomocí
+\texttt{captureRef} fotografii, pro odstranění UI na fotografii je využit časovač \texttt{setTimeout(r, 100)} a stav \texttt{uiVisible}.
+
+K uložení fotografie slouží funkce \texttt{savePhoto} využívající nativní knihovnu \texttt{@react-native-camera-roll/camera-roll}, která zajišťuje
+přístup do knihovny, kam se fotografie ukládá.
+
+\begin{verbatim}
+await CameraRoll.saveAsset(capturedPhoto, {
+        type: "photo",
+        album: "ColorFinder",
+});
+\end{verbatim}
+
+Poslední význačnou částí CameraScreen je možnost výběru fotografie z galerie. Tu zajišťuje funkce \texttt{pickFromGallery} s \texttt{launchImageLibrary} z knihovny
+\texttt{react-native-image-picker}. Pro načtení využívá časovač, během kterého se nastaví vybraná fotografie.
+
+\begin{verbatim}
+const pickFromGallery = async () => {
+    try {
+      const result = await launchImageLibrary({ mediaType: "photo" });
+      if (result.didCancel || !result.assets?.[0]?.uri) return;
+      setCapturedPhoto(result.assets[0].uri);
+      setStatus("Photo loaded");
+      setSelectedColor("");
+      setUiVisible(false);
+
+      setTimeout(async () => {
+        try {
+          const tag = findNodeHandle(viewRef.current);
+          if (!tag) return;
+          const uri = await captureRef(tag, { format: "png", quality: 1 });
+          setCapturedPhoto(uri);
+        } catch (e) {
+          console.warn("Snapshot after gallery load failed:", e);
+        } finally {
+          setUiVisible(true);
+        }
+      }, 500);
+    } catch {
+      Alert.alert("Error", "Failed to pick image");
+    }
+};
+\end{verbatim}
+
+\subsection{SceneAR}
+CameraScreen komunikuje se SceneAR pomocí \texttt{ViroARSceneNavigator}. SceneAR zajišťuje logiku rozšířené reality,
+tvorbu materiálů a umístění informačního boxu s detekovanou barvou do prostoru.
+
+
+\subsection{ColorDetail}
+
+\subsection{ColorData}
+
+\subsection{Help}
+
+\subsection{Library}
