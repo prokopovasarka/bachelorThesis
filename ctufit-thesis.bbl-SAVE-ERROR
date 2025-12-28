@@ -2037,6 +2037,79 @@
       \verb https://aws.amazon.com/devops/continuous-integration/
       \endverb
     \endentry
+    \entry{coursera_github}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=0647960ed41328f21b9e478d684a86d5}{%
+           family={Staff},
+           familyi={S\bibinitperiod},
+           given={Coursera},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Coursera}%
+      }
+      \strng{namehash}{0647960ed41328f21b9e478d684a86d5}
+      \strng{fullhash}{0647960ed41328f21b9e478d684a86d5}
+      \strng{fullhashraw}{0647960ed41328f21b9e478d684a86d5}
+      \strng{bibnamehash}{0647960ed41328f21b9e478d684a86d5}
+      \strng{authorbibnamehash}{0647960ed41328f21b9e478d684a86d5}
+      \strng{authornamehash}{0647960ed41328f21b9e478d684a86d5}
+      \strng{authorfullhash}{0647960ed41328f21b9e478d684a86d5}
+      \strng{authorfullhashraw}{0647960ed41328f21b9e478d684a86d5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{What Is GitHub? Use Cases and FAQ}
+      \field{urlday}{27}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.coursera.org/articles/what-is-github
+      \endverb
+      \verb{url}
+      \verb https://www.coursera.org/articles/what-is-github
+      \endverb
+    \endentry
+    \entry{github_actions_docs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b79b798b2812cfe1c1431894a617897d}{%
+           family={GitHub},
+           familyi={G\bibinitperiod},
+           given={Inc.},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {GitHub Docs}%
+      }
+      \strng{namehash}{b79b798b2812cfe1c1431894a617897d}
+      \strng{fullhash}{b79b798b2812cfe1c1431894a617897d}
+      \strng{fullhashraw}{b79b798b2812cfe1c1431894a617897d}
+      \strng{bibnamehash}{b79b798b2812cfe1c1431894a617897d}
+      \strng{authorbibnamehash}{b79b798b2812cfe1c1431894a617897d}
+      \strng{authornamehash}{b79b798b2812cfe1c1431894a617897d}
+      \strng{authorfullhash}{b79b798b2812cfe1c1431894a617897d}
+      \strng{authorfullhashraw}{b79b798b2812cfe1c1431894a617897d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Understanding GitHub Actions}
+      \field{urlday}{28}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.github.com/en/actions/get-started/understand-github-actions
+      \endverb
+      \verb{url}
+      \verb https://docs.github.com/en/actions/get-started/understand-github-actions
+      \endverb
+    \endentry
     \entry{itnetwork_usestate}{online}{}{}
       \name{author}{1}{}{%
         {{hash=1d43c9e89f8e44a35e700d5d4bbb3c5f}{%
@@ -2071,6 +2144,83 @@
       \endverb
       \verb{url}
       \verb https://www.itnetwork.cz/javascript/react/zaklady/stavy-v-reactu-a-hook-usestate
+      \endverb
+    \endentry
+    \entry{ibm_unit_testing}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=c2fe9994dd106733db138dc4634043b4}{%
+           family={Powell},
+           familyi={P\bibinitperiod},
+           given={Phill},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d08dfe1fb1123075ed9c0b177fdef575}{%
+           family={Smalley},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IBM}%
+      }
+      \strng{namehash}{9fbd073db812b3e048ef33dadfeab436}
+      \strng{fullhash}{9fbd073db812b3e048ef33dadfeab436}
+      \strng{fullhashraw}{9fbd073db812b3e048ef33dadfeab436}
+      \strng{bibnamehash}{9fbd073db812b3e048ef33dadfeab436}
+      \strng{authorbibnamehash}{9fbd073db812b3e048ef33dadfeab436}
+      \strng{authornamehash}{9fbd073db812b3e048ef33dadfeab436}
+      \strng{authorfullhash}{9fbd073db812b3e048ef33dadfeab436}
+      \strng{authorfullhashraw}{9fbd073db812b3e048ef33dadfeab436}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is Unit Testing?}
+      \field{urlday}{28}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ibm.com/think/topics/unit-testing
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/think/topics/unit-testing
+      \endverb
+    \endentry
+    \entry{contentsquare_usability_testing}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=fb193acdee8a8bd7a4144e8ce72b0bf8}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Contentsquare\bibnamedelima Content},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Contentsquare}%
+      }
+      \strng{namehash}{fb193acdee8a8bd7a4144e8ce72b0bf8}
+      \strng{fullhash}{fb193acdee8a8bd7a4144e8ce72b0bf8}
+      \strng{fullhashraw}{fb193acdee8a8bd7a4144e8ce72b0bf8}
+      \strng{bibnamehash}{fb193acdee8a8bd7a4144e8ce72b0bf8}
+      \strng{authorbibnamehash}{fb193acdee8a8bd7a4144e8ce72b0bf8}
+      \strng{authornamehash}{fb193acdee8a8bd7a4144e8ce72b0bf8}
+      \strng{authorfullhash}{fb193acdee8a8bd7a4144e8ce72b0bf8}
+      \strng{authorfullhashraw}{fb193acdee8a8bd7a4144e8ce72b0bf8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Usability Testing: what it is, its benefits, and why it matters}
+      \field{urlday}{28}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://contentsquare.com/guides/usability-testing/
+      \endverb
+      \verb{url}
+      \verb https://contentsquare.com/guides/usability-testing/
       \endverb
     \endentry
   \enddatalist
