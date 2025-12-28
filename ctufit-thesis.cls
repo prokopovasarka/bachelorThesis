@@ -607,7 +607,7 @@
 		\DeclareRobustCommand{\thectufitlistingscommand}{\lstlistoflistings}%
 		\lstset{basicstyle=\small\ttfamily,keywordstyle=\bfseries,%
 				backgroundcolor=\color{backgroundgray},%
-				frame=single,framerule=0pt,xleftmargin=\fboxsep,xrightmargin=\fboxsep}%
+				frame=single,framerule=0pt,xleftmargin=\fboxsep,xrightmargin=\fboxsep,}%
 	}{}%
 	\@ifpackageloaded{minted}{%
 		\DeclareRobustCommand{\listingscaption}{\thectufitlistinglabel}%

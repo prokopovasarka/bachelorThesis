@@ -1,1 +1,30 @@
 \section{Výsledky práce}
+Následující sekce se věnuje celkovému zhodnocení výsledků jednotlivých fází vývoje po implementaci a testování.
+Zároveň poskytuje vyhodnocení plnění funkčních a nefunkčních požadavků.
+
+\subsection{Shrnutí výsledků}
+Analytická část poskytla důkladnější vhled do teorie barev spolu s popisem barevných systému.
+Část byla věnována taktéž problematice barevného vidění a poruchám barevného vidění, následované 
+rešerší existujících aplikací včetně zaznamenání jejich výhod a nevýhod. Díky analytické části bylo možné 
+sestavit funkční a nefunkční požadavky pro vyvíjenou aplikaci.
+
+Vybraná \textit{Component-based} architektura se osvědčila při vývoji a poskytla díky rozdělení do komponent 
+lepší organizaci a přehlednost celého kódu. Díky volbě této architektury lze aplikaci v budoucnosti dále rozšiřovat 
+a umožnila taktéž snadné testování. 
+
+Volba VSCode spolu s Xcode pro spouštění aplikace se ukázalo jako vhodným kompromisem. VSCode poskytuje přehlednější prostředí a více 
+možností přizpůsobení. Vzhledem k tomu, že bylo nutné při implementaci spouštět aplikaci na fyzickém telefonu, jelikož simulátor nepovoluje rozšířenou realitu,
+Xcode sloužíl jako funkční prostředník při sestavení aplikace pro iPhone.
+
+Implementační část sloužila k vývoji aplikace, aby následně mohla být řádně otestována a mohly být vyladěny její nedostatky.
+
+Výsledkem bakalářské práce je aplikace pro platformu iOS i Android detekující barvy za využití rozšířené reality, celý proces vývoje tak lze 
+považovat za úspěšný.
+
+\subsection{Splnění požadavků}
+Výsledná aplikace splňuje veškeré nefunkční požadavky stanovené v analýze. Jendá se o multiplatformní aplikace pro Android i iOS, vhodná pro modely Apple iPhone 8 a Android 7.0 a vyšší, využívá rozšířenou realitu
+k detekci barev. Aplikace zároveň funguje plynule a díky jednoduchému UI a zvoleným UI prvkům je přístupná všeobecnému publiku. Aplikaci 
+je možné snadno rozšiřovat o další palety i možnosti interakce.
+
+Veškeré funkční požadavky s prioritou \textit{must have} a \textit{should have} byly splněny. Taktéž došlo z většiny ke splnění požadavků 
+označených \textit{could have}. V souladu s časovým rozvržením nebyly implementovány požadavky s prioritou \textit{will not have}.

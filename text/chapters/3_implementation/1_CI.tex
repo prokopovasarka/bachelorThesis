@@ -4,6 +4,34 @@ postup zahrnující sloučení kódu na sdíleném úložišti a automatické sp
 při integrační fázi. Hlavním cílem CI je rychlejší vyhledávání chyb a jejich snazší řešení, zlepšení kvality kódu a šetření času
 při ověřování a vydávání nových aktualizací.~\cite{aws_continuous_integration}
 
-Pro zavedení CI do projektu bylo zvolené úložiště GitHub a proces jeho zavedení je popsané v následující podeskci.
+Pro zavedení CI do projektu bylo zvolené úložiště GitHub a proces jeho zavedení je popsaný v následující podeskci.
 
 \section{GitHub}
+GitHub je webová platforma pro vývojáře k ukládání a spravování kódu. Umožňuje spolupráci na projektech 
+a sdílení open-source projektů~\cite{coursera_github}. Pro vytvoření vlastních workflow pro CI/CD nyní GitHub nabízí 
+\textbf{GitHub Actions} umožňující sestavení kódu přímo v repozitáři a spouštění testů. Pro veřejné repozitáře využívající \textit{Github-hosted runners}, což 
+je virtuální prostředí poskytnuté od GitHub, je tato funkcionalita bez poplatku. Pro soukromé repozitáře je služba zpoplatněna po využití stanoveného počtu minut.
+Poslední možností je spouštět pipeline lokálně, pak je služba taktéž bez poplatku.
+
+Následující popis fungováni workflow v GitHub Actions vychází z~\cite{github_actions_docs}.
+
+Workflow je konfigurovatelný automatizovaný proces, při němž se spouští jeden či více procesů. Je definovaný souborem YAML uloženým 
+v repozitáři a spustí se buď dle definovaného plánu, ručně či po spuštění akce v repozitáři. Workflows jsou definované v repozitáři 
+v adresáři \texttt{.github/workflows}, v této práci přesněji v souboru \texttt{ci.yml}.
+
+Event je specifická aktivita v repozitáři, která spustí provedení Workflow. Je zadefinována v části \texttt{on}, a to při
+\texttt{push} či \texttt{pull\_request} pro vybrané větve.
+
+Job je sada kroků (Steps), které se provedou na stejném runner. Buď se jedná o shell skript či akce (Actions), které budou provedeny. Kroky se prováději ve 
+stanoveném pořadí a jsou na sobě vzájemně závislé. V případě této práce se nejprve provádí testy, po kterých následuje sestavení aplikace pro různé platformy. 
+Mohou být zároveň nepovinné, tedy pokud nedojde k jejich úspěšnému dokončení, lze i přesto pokračovat.
+
+Action je předdefinovaná sada úloh či kód, který je opakovaně využitelný a provádí úkony v rámci pracovního postupu. Snižuje množství opakujícího se kódu, příkladem 
+je načtení repozitáře, nastavení autentizace pro poskytovatele cloud služeb či nastavení správných toolchainů.
+
+Runner je server, na kterém je spuštěna Workflow. GitHub nabízí Ubuntu Linux, Microsoft Windows i macOS runner a každý může provádět jeden Job v daný moment. 
+Ke spouštění testů je využit \texttt{ubuntu-latest} a k sestavení iOS aplikace \texttt{macos-latest}.
+
+Pro potřeby této bakalářské práce je využita CI, dalším krokem by mohl být \textit{Continuous deployment} sloužící k automatizaci nasazení a publikování projektů, například 
+přímo do obchodu s aplikacemi. Pro sdílení aplikace v AppStore je však vyžadována placená služba Apple Developer Program a aplikace musí projít schvalovacím procesem.
+

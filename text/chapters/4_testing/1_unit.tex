@@ -1,1 +1,127 @@
 \section{Unit testování}
+Unit testování je metoda při vyhodnocování softwaru věnující speciální pozornost komponentám, metodám či nejměnším možným 
+jednotkám kódu. Testování zahrnuje taktéž izolaci těchto jednotek, aby mohla být řádně ověřena jejich funkčnost předtím, než budou 
+integrovány do systému. Tato sekce vychází z~\cite{ibm_unit_testing}.
+
+Unit testy urychlují vývojový proces díky možnosti jejich automatizace. Z dlouhodobého hlediska pomáhají unit testy šetřit náklady, jelikož 
+v pozdějších fázích vývoje, kde náklady bývají značně vyšší, je třeba méně ladění. Důvodem je také uvažování o potenciálních problémech již v raných fázích a možnost jejich předcházení.
+Podporují také vyšší kvalitu kódu a celkově vytváří spolehlivé kódové základy. 
+
+Pro unit testování existuje 5 obecně uznávaných kroků, které se provádějí postupně.
+
+\paragraph{1. Identifikace jednotky}\mbox{}\\
+V této části probíhá výběr jednotky, která následně bude testována. Může se jednat o funkci, třídu, metodu či komponentu.
+
+\paragraph{2. Výběr přístupu}\mbox{}\\
+V části výběru přístupu je rozhodováno o typu testování, které má být provedeno. Může se jednat o manuální testování či automatizované 
+testování za využití některého z dostupných frameworků.
+
+\paragraph{3. Vytvoření testovacího prostředí}\mbox{}\\
+K provedení samotného testování je třeba správný výběr prostředí. Je nutné, aby splňovalo veškeré podmínky pro provedení testů včetně testovacích dat a 
+závislostí. Využívá se integrované vývojové prostředí (IDE) podporující unit testování.
+
+\paragraph{4. Vytvoření a použití testováních jednotek}\mbox{}\\
+Ve 4. části probíhá výběr testovacího framworku a napsání testovacích případů, které budou využity. Kompilátor převede testy napsané ve zvoleném programovacím jazyce na spustitelný kód.
+Následně je třeba potvrdit výsledky testů
+
+\paragraph{5. Odstranění chyb a vyřešení problémů}\mbox{}\\
+Pokud některý z testovacích případů selže, je nutné odladit kód a zjistit příčinu problému. Následně pro potvrzení, že je chyba opravdu opravena, se spustí znovu jednotkové testy.
+
+Při unit testování je možné využít některý z dostupných frameworků, které usnadňují organizaci, report chyb a vyhodnocování testů.
+Pro Javascript je možné využít Jest či Mocha frameworky, Pytest je určen pro testy v jazyce Python, existuje však mnoho dalších.
+
+\subsection{Osvědčené postupy pro unit testování}
+V následujících řádcích jsou zmíněné vybrané osvědčené postupy při unit testování, které pomohou 
+k lepším výsledkům a vyšší kvalitě testování.
+
+\paragraph{Testování co největšího množství kódu}\mbox{}\\
+Je důležité otestovat a vyhodnotit co nejvíce kritických částí kódu. 
+Ne vždy lze otestovat 100 \% kódu, ale developer by měl vždy mířit na dostatečně 
+vysoké množství, například 70 \% až 80 \%.
+
+\paragraph{Využívání CI/CD pipeline}\mbox{}\\
+Použití \textit{continuous integration/continuous deployment} je klíč k 
+procesu testování díky automatizaci testovacích funkcí. Díky spouštění CI/CD pipeline 
+jsou automatizované unit testy spouštěny vždy v případě provedení změn v kódu.
+
+\paragraph{Zvažování krajních případů}\mbox{}\\
+Okrajové případy reflektují extrémní případy používání softwaru, ke kterým dochází
+u jednotek či provozních parametrů. Příklady těchto chyb zahrnují přístup k poli mimo jeho rozsah, 
+index překračující povolenou hodnotu a další. V takových případech je často nutná restrukturalizace kódu.
+
+\subsection{Ukázka}
+Následuje ukázka unit testů vyvíjeného software pro uzavření sekce o unit testování. 
+Následující unit test zjišťuje, zda je pro poskytnuté barvy správně proveden převod z RGB do CMYK.
+
+\begin{lstlisting}
+    describe('RGB to CMYK Conversion', () => {
+    it('converts pure cyan #00FFFF to CMYK with C=100%', () => {
+      const { result } = renderHook(() => useColorData('#00FFFF'));
+      expect(result.current.cmykCode).toBe('C: 100%, M: 0%, Y: 0%, K: 0%');
+    });
+
+    it('converts pure magenta #FF00FF to CMYK with M=100%', () => {
+      const { result } = renderHook(() => useColorData('#FF00FF'));
+      expect(result.current.cmykCode).toBe('C: 0%, M: 100%, Y: 0%, K: 0%');
+    });
+
+    it('converts pure yellow #FFFF00 to CMYK with Y=100%', () => {
+      const { result } = renderHook(() => useColorData('#FFFF00'));
+      expect(result.current.cmykCode).toBe('C: 0%, M: 0%, Y: 100%, K: 0%');
+    });
+
+    it('converts black #000000 to CMYK with K=100%', () => {
+      const { result } = renderHook(() => useColorData('#000000'));
+      expect(result.current.cmykCode).toBe('C: 0%, M: 0%, Y: 0%, K: 100%');
+    });
+
+    it('converts white #FFFFFF to CMYK with all 0%', () => {
+      const { result } = renderHook(() => useColorData('#FFFFFF'));
+      expect(result.current.cmykCode).toBe('C: 0%, M: 0%, Y: 0%, K: 0%');
+    });
+
+    it('formats CMYK string correctly', () => {
+      const { result } = renderHook(() => useColorData('#FF5733'));
+      expect(result.current.cmykCode).toMatch(/^C: \d+%, M: \d+%, Y: \d+%, K: \d+%$/);
+    });
+  });
+\end{lstlisting}
+
+V druhé ukázce je proveden test správného zobrazení textu. Jelikož na obrazovce s detailem barvy barva pozadí 
+odpovídá vybranému odstínu, je třeba uvažovat kontrast s textem. Proto na světlém pozadí text a ohraničení palet je černé, 
+naopak při tmavém odstínu je text s ohraničením nastaven na bílou barvu.
+
+\begin{lstlisting}
+    describe('Contrast Text Color', () => {
+    it('uses dark text for light background (white)', () => {
+      const route = {
+        params: { color: '#FFFFFF' },
+      };
+      
+      const { getByText } = render(<ColorDetail route={route} />);
+      const title = getByText('Mocked Color Name');
+      
+      // Should have black text color (#000)
+      expect(title.props.style).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ color: '#000' })
+        ])
+      );
+    });
+
+    it('uses light text for dark background (black)', () => {
+      const route = {
+        params: { color: '#000000' },
+      };
+      
+      const { getByText } = render(<ColorDetail route={route} />);
+      const title = getByText('Mocked Color Name');
+      
+      // Should have white text color (#fff)
+      expect(title.props.style).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({ color: '#fff' })
+        ])
+      );
+    });
+\end{lstlisting}
