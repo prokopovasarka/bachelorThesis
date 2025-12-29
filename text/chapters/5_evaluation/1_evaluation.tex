@@ -1,6 +1,6 @@
 \section{Výsledky práce}
 Následující sekce se věnuje celkovému zhodnocení výsledků jednotlivých fází vývoje po implementaci a testování.
-Zároveň poskytuje vyhodnocení plnění funkčních a nefunkčních požadavků.
+Zároveň poskytuje vyhodnocení plnění funkčních a nefunkčních požadavků a porovnání s existujícími aplikacemi.
 
 \subsection{Shrnutí výsledků}
 Analytická část poskytla důkladnější vhled do teorie barev spolu s popisem barevných systému.
@@ -22,9 +22,31 @@ Výsledkem bakalářské práce je aplikace pro platformu iOS i Android detekuj�
 považovat za úspěšný.
 
 \subsection{Splnění požadavků}
-Výsledná aplikace splňuje veškeré nefunkční požadavky stanovené v analýze. Jendá se o multiplatformní aplikace pro Android i iOS, vhodná pro modely Apple iPhone 8 a Android 7.0 a vyšší, využívá rozšířenou realitu
+Výsledná aplikace splňuje veškeré nefunkční požadavky stanovené v analýze. Jedná se o multiplatformní aplikaci pro Android i iOS, vhodná pro modely Apple iPhone 8 a Android 7.0 a vyšší, využívá rozšířenou realitu
 k detekci barev. Aplikace zároveň funguje plynule a díky jednoduchému UI a zvoleným UI prvkům je přístupná všeobecnému publiku. Aplikaci 
 je možné snadno rozšiřovat o další palety i možnosti interakce.
 
 Veškeré funkční požadavky s prioritou \textit{must have} a \textit{should have} byly splněny. Taktéž došlo z většiny ke splnění požadavků 
 označených \textit{could have}. V souladu s časovým rozvržením nebyly implementovány požadavky s prioritou \textit{will not have}.
+
+\subsection{Porovnání s existujícími aplikacemi}
+V poslední subsekci dojde k porovnání výsledné aplikace s již existujícími konkurenčními aplikacemi, které byly představeny v analýze.
+Jedná se o Color Blind Pal, Color Identifier: Color Picker a Color Name Recognizer.
+
+\paragraph{Color Blind Pal}\mbox{}\\
+Aplikace umožňuje rozpoznávat barvy z kamery, tedy má pdobnou úlohu, jako aplikace vyvinutá v této práci. Oproti Color Blind Pal je však
+implementována funkce rozšířené reality a díky možnosti volit bod na kameře stiskem se zamezilo automatickému přeskakování mezi barvami na spektru,
+jako v Color Blind Pal, které působí chaoticky. Funkcí navíc je také možnost detekce barvy z fotografie a ukládání barev. Uživatel se k nim tak později může 
+vrátit.
+
+\paragraph{Color Identifier: Color Picker}\mbox{}\\
+Color Identifier: Color Picker disponuje velkou řadou stejných funkcionalit, jako vyvíjená aplikace. Dokáží detekovat barvu z kamery, ukládat si nové barvy a vytvářet barevné palety.
+Vyvíjená aplikace v této práci, stejně jako v předchozím porovnání, nabídne navíc AR režim, kterým ani jedna z aplikací nedisponuje. Zároveň je velkou výhodou apliakce vyvíjené v této práci 
+její jednoduchost. Color Identifier: Color Picker obsahuje mnoho funkcionalit, avšak toto množství zhoršuje uživatelskou přívětivost a v aplikaci lze nalézt nadbytečné funkce. Jednoduchost a 
+snaha soustředit se na nejdůležitější složky softwaru, které může uživatel využívat, umožňuje vytvořit přátelštějští prostředí.
+
+\paragraph{Color Name Recognizer}\mbox{}\\
+Color Name Recognizer umožňuje detekci barev z kamery i fotografií. Její výhodou je velká interakce s kamerou a možnost pozastavení kamery pro detekci barvy. Tato funkcionalita byla implementována 
+i v aplikaci v této práci. V režimu kamery se však aplikace Color Name Recognizer potýká se stejným problémem, jako v prvním případě, a sice přeskakování barev a chaotičnost. Díky těmto dvěma příkladům
+byl při vývoji kladen důraz na větší konzistenci a stabilitu aplikace a bylo navrženo řešení pro lepší uživatelskou přívětivost.   
+

@@ -1,32 +1,30 @@
-LaTeX template for theses at FIT CTU
-===================================
-
-[![pipeline status](https://gitlab.fit.cvut.cz/theses-templates/FITthesis-LaTeX/badges/master/pipeline.svg)](https://gitlab.fit.cvut.cz/theses-templates/FITthesis-LaTeX/commits/master)
-
-
-About
+ČESKY
 -----
+Název: Mobilní aplikace pro detekci barev a vizuální návrh barevných schémat
+Autor: Šárka Prokopová
+Typ práce: Bakalářská práce
+Instituce: Fakulta informačních technologií, České vysoké učení technické v Praze
+Rok: 2025
+Obsah:
+    src: Složka src obsahuje zdrojové kódy vyvíjené aplikace a zdrojovou formu
+        práce ve formátu LaTeX.
+    src/impl: Složka obsahuje zdrojové kódy implementace aplikace.
+    src/thesis: Složka obsahuje zdrojovou formu bakalářské práce v LaTeX formátu.
+    examples: Složka obsahuje ukázky vyvinuté aplikace.
+    examples/video: Složka obsahuje video pro ukázku funkčnosti aplikace.
+    text: Složka obsahuje text práce ve formátu pdf.
 
-Recommended template for theses submitted at [Faculty of Information Technology](https://fit.cvut.cz) at [Czech Technical University in Prague](https://cvut.cz). For use with XeLaTeX or LuaLaTeX.
-
-
-Version
---------
-1.5.8, built 22. 5. 2025. The whole changelog can be found in the [Changelog file](changelog.md).
-
-
-Bugs and support
---------
-
-Please submit bug reports using [issues](https://gitlab.fit.cvut.cz/theses-templates/FITthesis-LaTeX/issues).
-
-Current maintainers
--------------------
-
-* [Tomáš Nováček](https://usermap.cvut.cz/profile/novacto3)
-
-Previous maintainers
--------------------
-
-* [Ondřej Guth](https://usermap.cvut.cz/profile/guthondr)
-* [Eliška Šestáková](https://usermap.cvut.cz/profile/sestaeli)
+ENG
+-----
+Title: Mobile Application for Detecting Colors and Designing Color Palettes
+Author: Šárka Prokopová
+Thesis Type: Bachelor’s Thesis
+Institution: Faculty of Information Technology, Czech Technical University in Prague
+Year: 2025
+Contents:
+    src: The src directory contains the source code of the developed application and the source files of the thesis written in LaTeX.
+    src/impl: This directory contains the source code of the application implementation.
+    src/thesis: This directory contains the source files of the bachelor’s thesis in LaTeX format.
+    examples: This directory contains examples of the developed application.
+    examples/video: This directory contains a video demonstrating the functionality of the application.
+    text: This directory contains the thesis text in PDF format.

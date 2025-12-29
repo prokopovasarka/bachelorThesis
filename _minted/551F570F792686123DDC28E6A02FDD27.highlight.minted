@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{CameraRoll}\PYG{p}{.}\PYG{n+nx}{saveAsset}\PYG{p}{(}\PYG{n+nx}{capturedPhoto}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{type}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}photo\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{album}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}ColorFinder\PYGZdq{}}\PYG{p}{,}
+\PYG{p}{\PYGZcb{});}
+\end{MintedVerbatim}

@@ -1,21 +1,19 @@
 \section{Continuous Integration}
-Jedním z klíčových kroků při implementaci je zavedení \textit{Continuous integration} (CI). Jedná se o softwarový
+Jedním z klíčových kroků při implementaci je zavedení \textit{Continuous Integration} (CI). Jedná se o softwarový
 postup zahrnující sloučení kódu na sdíleném úložišti a automatické spouštění spolu s testováním. Vztahuje se nejčastěji k fázi sestavení nebo
 při integrační fázi. Hlavním cílem CI je rychlejší vyhledávání chyb a jejich snazší řešení, zlepšení kvality kódu a šetření času
 při ověřování a vydávání nových aktualizací.~\cite{aws_continuous_integration}
 
-Pro zavedení CI do projektu bylo zvolené úložiště GitHub a proces jeho zavedení je popsaný v následující podeskci.
+Pro zavedení CI do projektu a jeho verzování v průběhu celého vývoje bylo zvolené úložiště GitHub a proces jeho zavedení je popsaný v následující podeskci.
 
 \section{GitHub}
 GitHub je webová platforma pro vývojáře k ukládání a spravování kódu. Umožňuje spolupráci na projektech 
 a sdílení open-source projektů~\cite{coursera_github}. Pro vytvoření vlastních workflow pro CI/CD nyní GitHub nabízí 
-\textbf{GitHub Actions} umožňující sestavení kódu přímo v repozitáři a spouštění testů. Pro veřejné repozitáře využívající \textit{Github-hosted runners}, což 
+\textbf{GitHub Actions} umožňující sestavení kódu přímo v repozitáři a spouštění testů. Pro veřejné repozitáře využívající \textit{GitHub-hosted runners}, což 
 je virtuální prostředí poskytnuté od GitHub, je tato funkcionalita bez poplatku. Pro soukromé repozitáře je služba zpoplatněna po využití stanoveného počtu minut.
 Poslední možností je spouštět pipeline lokálně, pak je služba taktéž bez poplatku.
 
-Následující popis fungováni workflow v GitHub Actions vychází z~\cite{github_actions_docs}.
-
-Workflow je konfigurovatelný automatizovaný proces, při němž se spouští jeden či více procesů. Je definovaný souborem YAML uloženým 
+Následující popis fungováni workflow v GitHub Actions vychází z~\cite{github_actions_docs}. Workflow je konfigurovatelný automatizovaný proces, při němž se spouští jeden či více procesů. Je definovaný souborem YAML uloženým 
 v repozitáři a spustí se buď dle definovaného plánu, ručně či po spuštění akce v repozitáři. Workflows jsou definované v repozitáři 
 v adresáři \texttt{.github/workflows}, v této práci přesněji v souboru \texttt{ci.yml}.
 

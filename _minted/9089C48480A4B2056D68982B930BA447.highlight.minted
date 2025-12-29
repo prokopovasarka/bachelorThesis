@@ -1,0 +1,27 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{pickFromGallery}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{async}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{try}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{launchImageLibrary}\PYG{p}{(\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{mediaType}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}photo\PYGZdq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{});}
+\PYG{+w}{      }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{result}\PYG{p}{.}\PYG{n+nx}{didCancel}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{o}{!}\PYG{n+nx}{result}\PYG{p}{.}\PYG{n+nx}{assets}\PYG{o}{?}\PYG{p}{.[}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{o}{?}\PYG{p}{.}\PYG{n+nx}{uri}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{      }\PYG{n+nx}{setCapturedPhoto}\PYG{p}{(}\PYG{n+nx}{result}\PYG{p}{.}\PYG{n+nx}{assets}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{].}\PYG{n+nx}{uri}\PYG{p}{);}
+\PYG{+w}{      }\PYG{n+nx}{setStatus}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Photo loaded\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{      }\PYG{n+nx}{setSelectedColor}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{      }\PYG{n+nx}{setUiVisible}\PYG{p}{(}\PYG{k+kc}{false}\PYG{p}{);}
+
+\PYG{+w}{      }\PYG{n+nx}{setTimeout}\PYG{p}{(}\PYG{k}{async}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{try}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{tag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{findNodeHandle}\PYG{p}{(}\PYG{n+nx}{viewRef}\PYG{p}{.}\PYG{n+nx}{current}\PYG{p}{);}
+\PYG{+w}{          }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n+nx}{tag}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{          }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{uri}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{captureRef}\PYG{p}{(}\PYG{n+nx}{tag}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{format}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}png\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{quality}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{+w}{ }\PYG{p}{\PYGZcb{});}
+\PYG{+w}{          }\PYG{n+nx}{setCapturedPhoto}\PYG{p}{(}\PYG{n+nx}{uri}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{catch}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{e}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{warn}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Snapshot after gallery load failed:\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{e}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{finally}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{setUiVisible}\PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{},}\PYG{+w}{ }\PYG{l+m+mf}{500}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{catch}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n+nx}{Alert}\PYG{p}{.}\PYG{n+nx}{alert}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Error\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Failed to pick image\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\end{MintedVerbatim}

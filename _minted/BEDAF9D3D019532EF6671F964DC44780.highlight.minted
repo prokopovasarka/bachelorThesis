@@ -1,0 +1,34 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n+nx}{describe}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Contrast Text Color\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{it}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}uses dark text for light background (white)\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{route}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{params}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{color}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}FFFFFF\PYGZsq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{};}
+
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{getByText}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{render}\PYG{p}{(}\PYG{o}{\PYGZlt{}}\PYG{n+nx}{ColorDetail}\PYG{+w}{ }\PYG{n+nx}{route}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{n+nx}{route}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{/\PYGZgt{}}\PYG{p}{);}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{title}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{getByText}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Mocked Color Name\PYGZsq{}}\PYG{p}{);}
+
+\PYG{+w}{      }\PYG{c+c1}{// Should have black text color (\PYGZsh{}000)}
+\PYG{+w}{      }\PYG{n+nx}{expect}\PYG{p}{(}\PYG{n+nx}{title}\PYG{p}{.}\PYG{n+nx}{props}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{).}\PYG{n+nx}{toEqual}\PYG{p}{(}
+\PYG{+w}{        }\PYG{n+nx}{expect}\PYG{p}{.}\PYG{n+nx}{arrayContaining}\PYG{p}{([}
+\PYG{+w}{          }\PYG{n+nx}{expect}\PYG{p}{.}\PYG{n+nx}{objectContaining}\PYG{p}{(\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{color}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}000\PYGZsq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{})}
+\PYG{+w}{        }\PYG{p}{])}
+\PYG{+w}{      }\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+
+\PYG{+w}{    }\PYG{n+nx}{it}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}uses light text for dark background (black)\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{route}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{params}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{color}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}000000\PYGZsq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{};}
+
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{getByText}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{render}\PYG{p}{(}\PYG{o}{\PYGZlt{}}\PYG{n+nx}{ColorDetail}\PYG{+w}{ }\PYG{n+nx}{route}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{n+nx}{route}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{/\PYGZgt{}}\PYG{p}{);}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{title}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{getByText}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Mocked Color Name\PYGZsq{}}\PYG{p}{);}
+
+\PYG{+w}{      }\PYG{c+c1}{// Should have white text color (\PYGZsh{}fff)}
+\PYG{+w}{      }\PYG{n+nx}{expect}\PYG{p}{(}\PYG{n+nx}{title}\PYG{p}{.}\PYG{n+nx}{props}\PYG{p}{.}\PYG{n+nx}{style}\PYG{p}{).}\PYG{n+nx}{toEqual}\PYG{p}{(}
+\PYG{+w}{        }\PYG{n+nx}{expect}\PYG{p}{.}\PYG{n+nx}{arrayContaining}\PYG{p}{([}
+\PYG{+w}{          }\PYG{n+nx}{expect}\PYG{p}{.}\PYG{n+nx}{objectContaining}\PYG{p}{(\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{color}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}fff\PYGZsq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{})}
+\PYG{+w}{        }\PYG{p}{])}
+\PYG{+w}{      }\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+\end{MintedVerbatim}

@@ -91,7 +91,8 @@ V druhé ukázce je proveden test správného zobrazení textu. Jelikož na obra
 odpovídá vybranému odstínu, je třeba uvažovat kontrast s textem. Proto na světlém pozadí text a ohraničení palet je černé, 
 naopak při tmavém odstínu je text s ohraničením nastaven na bílou barvu.
 
-\begin{lstlisting}
+\begin{figure}[htbp]
+\begin{minted}[breaklines]{js}
     describe('Contrast Text Color', () => {
     it('uses dark text for light background (white)', () => {
       const route = {
@@ -124,4 +125,7 @@ naopak při tmavém odstínu je text s ohraničením nastaven na bílou barvu.
         ])
       );
     });
-\end{lstlisting}
+\end{minted}
+\caption{Ukázka unit testů.}
+\label{fig:unit_tests}
+\end{figure}

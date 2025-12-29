@@ -1,0 +1,25 @@
+\section{Statická analýza}
+Statická analýza kódu představuje důležitou součást procesu vývoje softwaru, jejímž cílem je odhalení 
+potenciálních chyb, nekonzistencí a porušení definovaných pravidel již během vývoje aplikace, a to bez nutnosti jejího spuštění. 
+Umožňuje včasnou identifikaci problémů, které by se jinak projevily až v pozdějších fázích vývoje nebo při provozu aplikace, a 
+přispívá tak ke zvýšení kvality, čitelnosti a dlouhodobé udržitelnosti zdrojového kódu. V této práci je statická analýza integrována do procesu 
+\textit{Continuous Integration (CI)}, kde je automaticky prováděna při testování aplikace. Pro kontrolu dodržování standardů a odhalování běžných chyb je využit nástroj ESLint.
+
+\subsection{ESLint}
+ESLint je open-source projekt pomáhající nalézt a opravit problémy v JavaScript kódu. S ESLint je možné analyzovat JavaScript kód psaný v prohlížeči i na serveru, v libovolném Frameworku i bez něj. 
+Soustředí se na různé typy problémů, od potenciálních chyb běhu, přes nedodržování osvědčených postupů, po problémy se stylem.
+
+Pravidla \textbf{(Rules)} jsou základním stavebním kamenem ESLint. Každé pravidlo ověřuje, zda kód splňuje určitá očekávání a pokud tato očekávání nesplňuje, pomáhá s dalším postupem. Mohou také obsahovat 
+další konfigurační možnosti specifické pro nějaké pravidlo. ESLint disponuje knihovnou stanovených pravidel, která analyzuje, lze však vytvářet vlastní pravidla či využívat pravidla vytvořená dalšími vývojáři.
+Při vyvíjení softwaru bylo využité základní nastavení ESLint bez přidaných pravidel a v CI pipeline je označené jako \textit{optional}, jelikož hlavní prioritou CI je testování a sestavení aplikace. Avšak tímto způsobem umožňuje 
+vylepšovat kvalitu kódu a automatizovat tento proces.~\cite{coursera_github}
+
+\subsection{Dokumentace}
+Nedílnou součástí kvalitního softwaru je spolu s automatizovaným testováním a statickou analýzou také dokumentace a přehledná struktura zdrojového kódu. 
+Tyto aspekty významně přispívají k dlouhodobé udržitelnosti aplikace a usnadňují její další rozšiřování, pro samotného autora i případné spolupracovníky.
+Základní přehled o projektu poskytuje soubor \texttt{README}, který obsahuje shrnutí účelu aplikace a popis pro její sestavení a spuštění. Slouží jako vstupní bod pro 
+nové uživatele i vývojáře.
+
+Dalším důležitým prvkem jsou komentáře přímo ve zdrojovém kódu, které vysvětlují složitější části implementace, netriviální algoritmy či specifické chování aplikace. 
+Komentáře nejsou využívány k popisu samozřejmých konstrukcí, ale zaměřují se na objasnění důvodů zvoleného řešení. Tyto formy dokumentace jsou v této práci provázány 
+se statickou analýzou kódu, která prostřednictvím nástroje ESLint napomáhá udržovat konzistentní styl, čitelnost a dodržování definovaných pravidel napříč celým projektem.

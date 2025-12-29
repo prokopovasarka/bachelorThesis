@@ -1,0 +1,272 @@
+\lstset{
+  breaklines=true,
+  basicstyle=\ttfamily,
+  backgroundcolor={}
+}
+
+\section{Ukázky implementace}
+V následujících řádcích jsou prezentovány významné části implementace vyvíjené aplikace, jejich popis spolu
+s ukázkami zdrojových kódů.
+
+Implementace se řídí architekturou stanovenou v návrhu a splňuje funkční i nefunkční požadavky uvedené při analýze. 
+Sekce je tedy dle využité Component-based architektury rozdělená na popis jednotlivých komponent důležitých pro fungování celé 
+aplikace.
+
+\subsection{App}
+Komponenta \texttt{App} představuje vstupní komponentu celé vyvíjené aplikace. Hlavním cílem je inicializace navigace a umožňuje 
+obrazovkám mít přístup k navigaci. Je nutná pro fungování knihovny \texttt{@react-navigation}.
+
+\begin{minted}[breaklines]{js}
+<NavigationContainer>
+      <RootStack />
+</NavigationContainer>
+\end{minted}
+
+\subsection{RootStack a HomeScreen}
+\texttt{RootStack} definuje navigaci celé aplikace pomocí \texttt{createNativeStackNavigator}. Výchozí obrazovkou je \textbf{Home}, 
+další obrazovky jsou Camera, Library, Help a ColorDetail. Navigace je vytvořena formou zásobníku \texttt{Stack.Navigator}, každá obrazovka
+má vlastní hlavičku. \texttt{HomeScreen} kontroluje, zda se jedná o první spuštění aplikace, či zda byla aplikace v minulosti
+již spuštěna, dle této podmínky přesměruje uživatele na \texttt{Help} či \texttt{HomeScreen}. (Viz Ukázka \ref{fig:first_launch})
+
+\begin{minted}[breaklines]{js}
+React.useEffect(() => {
+    const checkFirstLaunch = async () => {
+      const alreadyLaunched = await AsyncStorage.getItem('alreadyLaunched');
+      if (alreadyLaunched === null) {
+        await AsyncStorage.setItem('alreadyLaunched', 'true');
+        navigation.replace('Help'); 
+      }
+    };
+    checkFirstLaunch();
+}, []);
+\end{minted}
+\noindent\textit{Ukázka implementace hooks při prvním spuštění.}\mbox{}\\
+\label{fig:first_launch}
+
+Obrázek \ref{fig:HomeScreen} zobrazuje úvodní stránku \texttt{HomeScreen} se zobrazením navigace a 
+vzhled obrazovky s hlavičkou \texttt{header} definovanou pro všechny obrazovky v \texttt{RootStack}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/implementation_1.jpg}
+    \caption{Ukázka implementace úvodní obrazovky \texttt{HomeScreen} a knihovny \texttt{Library}.}
+    \label{fig:HomeScreen}
+\end{figure}
+
+\subsection{CameraScreen}
+Tato část zajišťuje výběr barev z prostoru a jejich vizualizaci v prostoru. Má na starost práci s kamerou, galerií
+a perzistentním ukládáním dat. CameraScreen je hlavní obrazovka kamery. Řídí zároveň komunikaci s AR scénou.
+
+Funkce \texttt{handleTap} zjišťuje pozici kliknutí uživatele, následně se snaží z detekovat barvu pixelu, buď na základě vybrané fotografie
+z galerie nebo pomocí \texttt{CaptureRef}, která vytvoří dočasný snímek kamery pro získání pixelu. Díky knihovně
+\texttt{react-native-pixel-color} lze získat HEX kód barvy. Následně aktualizuje status. (Viz Ukázka \ref{fig:handle_tap})
+
+\begin{minted}[breaklines]{js}
+const handleTap = async (e: any) => {
+    const px = PixelRatio.get();
+    const x = Math.round(e.nativeEvent.locationX * px);
+    const y = Math.round(e.nativeEvent.locationY * px);
+    setTapPos({ x: e.nativeEvent.locationX, y: e.nativeEvent.locationY });
+
+    try {
+      const tag = findNodeHandle(viewRef.current);
+      if (!tag) throw new Error("View ref not found");
+      const uri = capturedPhoto || (await captureRef(tag, { format: "png", quality: 1 }));
+      const color = await PixelColor.getHex(uri, { x, y });
+      await placeAtPointRef.current?.(x, y, color);
+
+      setSelectedColor(color);
+      setStatus("Color selected");
+    } catch (err) {
+      console.warn("Pixel read error:", err);
+      setStatus("Pixel read failed");
+    }
+};
+\end{minted}
+\noindent\textit{Ukázka implementace detekce barvy kliknutím.}\mbox{}\\
+\label{fig:handle_tap}
+
+\texttt{CameraScreen} se stará taktéž o vytvoření a uložení fotografie. V případě snímání kamery funkce \texttt{takePhoto} vytvoří pomocí
+\texttt{captureRef} fotografii, pro odstranění UI na fotografii je využit časovač \texttt{setTimeout(r, 100)} a stav \texttt{uiVisible}.
+
+K uložení fotografie slouží funkce \texttt{savePhoto} využívající nativní knihovnu \texttt{@react-native-camera-roll/camera-roll}, která zajišťuje
+přístup do knihovny, kam se fotografie ukládá. (Viz Ukázka \ref{fig:safe_photo})
+
+\begin{figure}[htbp]
+\begin{minted}[breaklines]{js}
+await CameraRoll.saveAsset(capturedPhoto, {
+        type: "photo",
+        album: "ColorFinder",
+});
+\end{minted}
+\caption{Ukázka implementace ukládání fotografie.}
+\label{fig:safe_photo}
+\end{figure}
+
+Poslední význačnou částí CameraScreen je možnost výběru fotografie z galerie. Tu zajišťuje funkce \texttt{pickFromGallery} s \texttt{launchImageLibrary} z knihovny
+\texttt{react-native-image-picker}. Pro načtení využívá časovač, během kterého se nastaví vybraná fotografie. (Viz Ukázka \ref{fig:pick_gallery})
+
+\begin{minted}[breaklines]{js}
+const pickFromGallery = async () => {
+    try {
+      const result = await launchImageLibrary({ mediaType: "photo" });
+      if (result.didCancel || !result.assets?.[0]?.uri) return;
+      setCapturedPhoto(result.assets[0].uri);
+      setStatus("Photo loaded");
+      setSelectedColor("");
+      setUiVisible(false);
+
+      setTimeout(async () => {
+        try {
+          const tag = findNodeHandle(viewRef.current);
+          if (!tag) return;
+          const uri = await captureRef(tag, { format: "png", quality: 1 });
+          setCapturedPhoto(uri);
+        } catch (e) {
+          console.warn("Snapshot after gallery load failed:", e);
+        } finally {
+          setUiVisible(true);
+        }
+      }, 500);
+    } catch {
+      Alert.alert("Error", "Failed to pick image");
+    }
+};
+\end{minted}
+\noindent\textit{Ukázka implementace funkce výběru fotografie z kamery.}\mbox{}\\
+\label{fig:pick_gallery}
+
+\subsection{SceneAR}
+CameraScreen komunikuje se SceneAR pomocí \texttt{ViroARSceneNavigator}. SceneAR zajišťuje logiku rozšířené reality,
+tvorbu materiálů a umístění informačního boxu s detekovanou barvou do prostoru. 
+
+\textbf{Hooks} v React Native jsou funkce, které nám zpřístupní nějakou funkcionalitu z React~\cite{itnetwork_usestate}. Tyto funkcionality jsou využívány
+v celém projektu a~velký význam mají právě v komponentě \texttt{SceneAR}. Využívá hook useEffect při \texttt{registerPlaceAtPoint}, kde je třeba najít bod umístění
+AR objektu do prostoru. V něm, jak je vidět v Ukázce \ref{fig:hit_test} níže, využívá hit test \texttt{performARHitTestWithPoint} vysílající paprsek dle souřadnic bodu pixelu v 2D scéně.
+Pokud je nalezení úspěšné nastaví se pozice objektů. V opačném případě je reportována chyba. Objekty jsou vytvářeny s \texttt{ViroMaterials}.
+
+\begin{minted}[breaklines]{js}
+     try {
+        const results = await arRef.current.performARHitTestWithPoint(x, y);
+        const hit =
+          results?.find((r: any) => r.type === "ExistingPlaneUsingExtent") ||
+          results?.find((r: any) => r.type === "ExistingPlane") ||
+          results?.find((r: any) => String(r.type || "").includes("Estimated")) ||
+          results?.find((r: any) => r.type === "FeaturePoint");
+
+        if (hit?.transform?.position) {
+          setPlacedPos(hit.transform.position as [number, number, number]);
+          setPlacedHEX(color);
+          setPlacedName(colorData.colorName);
+          props.sceneNavigator?.viroAppProps?.setSelectedColor?.(color);
+          reportStatus("Placed");
+          return true;
+        }
+        return false;
+      } catch {
+        reportStatus("Hit-test failed");
+        return false;
+      }
+\end{minted}
+\noindent\textit{Ukázka implementace hit testu.}\mbox{}\\
+\label{fig:hit_test}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/camera_example.jpg}
+    \caption{Ukázka implementace obrazovky s kamerou v AR módu, výběru z galerie a potvrzení uložení obrázku.}
+    \label{fig:CameraScreenExample}
+\end{figure}
+
+\subsection{ColorData}
+Komponenta \texttt{useColorData} řídí logiku zobrazenou následně v detailu barvy. První část zajišťuje výpočty v 
+převodech barevných systémů. Detail vyobrazuje HEX, CMYK a HSL, následující příklad vyobrazuje funkci s výpočtem 
+převodu z HEX do CMYK. Nejprve dojde k separaci jednotlivých složek, následně proběhne převod. (Viz Ukázka \ref{fig:hex_to_cmyk})
+
+\begin{minted}[breaklines]{js}
+    const hexToCmyk = (hex: string) => {
+      const { r, g, b } = hexToRgb(hex); 
+      const rNorm = r/255; 
+      const gNorm = g/255; 
+      const bNorm = b/255; 
+      const k = 1 - Math.max(rNorm, gNorm, bNorm); 
+      const c = k === 1 ? 0 : (1 - rNorm - k) / (1 - k); 
+      const m = k === 1 ? 0 : (1 - gNorm - k) / (1 - k); 
+      const y = k === 1 ? 0 : (1 - bNorm - k) / (1 - k); 
+      
+      return `C: ${Math.round(c*100)}%, M: ${Math.round(m*100)}%, Y: ${Math.round(y*100)}%, K: ${Math.round(k*100)}%`; 
+    };
+\end{minted}
+\noindent\textit{Ukázka implementace funkce převodu kódů.}\mbox{}\\
+\label{fig:hex_to_cmyk}
+
+Zároveň se díky funkci \texttt{getContrastTextColor}, která detekuje kontrast konkrétní barvy, mění ohraničení v paletách a text. Tak 
+je postaráno o čitelnost textu.
+
+Druhá část komponenty je určena pro tvorbu palet. Následující ukázka zobrazuje celý postup výpočtu monochromatické, analogické i komplementární 
+palety. U monochromatické palety byl zvolen offset, díky kterému je zajištěno při jasných či naopak velmi tmavých odstínech posun zajišťující, že paleta 
+nebude vyobrazovat pouze černé či pouze bílé odstíny. (Viz Ukázka \ref{fig:generating_palettes})
+
+\begin{minted}[breaklines]{js}
+   OFFSET = 20
+   
+   ...
+
+   const generateMonochrome = (h: number, s: number, l: number) => {
+    const step = 10; 
+    const count = 3; 
+    const minL = l - count * step;
+    const maxL = l + count * step;
+
+    let shift = 0;
+
+    if (minL < OFFSET) {
+        shift = OFFSET-minL;
+    }
+
+    if (maxL > 100-OFFSET) {
+        shift = 100 - OFFSET - maxL;
+    }
+
+    const palette = [];
+    for (let i = -count; i <= count; i++) {
+        if (i === 0) continue;
+        let newL = l + i * step + shift;
+        newL = Math.min(100, Math.max(0, newL));
+        palette.push(`hsl(${h}, ${s}%, ${newL}%)`);
+    }
+    return palette;
+  };
+
+  const generateComplementary = (h: number, s: number, l: number) => {
+    const step = 10;
+    let compHue = (h + 180) % 360; 
+    const palette = [];
+    for (let i = -3; i <= 3; i++) {
+        if( i == 0 ) continue;
+        let newCompHue = (compHue + i * step) % 360;
+        palette.push(`hsl(${newCompHue}, ${s}%, ${l}%)`);
+    }
+    return palette;
+  };
+
+  const generateAnalogous = (h: number, s: number, l: number) => {
+    const step = 20;
+    const palette = [];
+    let newHue = h;
+    for (let i = -3; i <= 3; i++) {
+        if( i == 0 ) continue;
+        newHue = (h + i * step) % 360;
+        palette.push(`hsl(${newHue}, ${s}%, ${l}%)`);
+    }
+    return palette;
+  };
+\end{minted}
+\label{fig:generating_palettes}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/detail_example.jpg}
+    \caption{Ukázka implementace obrazovky s detailem barvy, kódy a paletami.}
+    \label{fig:ColorDetailExample}
+\end{figure}

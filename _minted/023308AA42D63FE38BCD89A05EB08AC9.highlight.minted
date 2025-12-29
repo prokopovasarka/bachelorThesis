@@ -1,0 +1,22 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{handleTap}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{async}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{e}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{any}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{px}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{PixelRatio}\PYG{p}{.}\PYG{n+nx}{get}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{Math}\PYG{p}{.}\PYG{n+nx}{round}\PYG{p}{(}\PYG{n+nx}{e}\PYG{p}{.}\PYG{n+nx}{nativeEvent}\PYG{p}{.}\PYG{n+nx}{locationX}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{px}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{y}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{Math}\PYG{p}{.}\PYG{n+nx}{round}\PYG{p}{(}\PYG{n+nx}{e}\PYG{p}{.}\PYG{n+nx}{nativeEvent}\PYG{p}{.}\PYG{n+nx}{locationY}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{px}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nx}{setTapPos}\PYG{p}{(\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{x}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{e}\PYG{p}{.}\PYG{n+nx}{nativeEvent}\PYG{p}{.}\PYG{n+nx}{locationX}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{y}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{e}\PYG{p}{.}\PYG{n+nx}{nativeEvent}\PYG{p}{.}\PYG{n+nx}{locationY}\PYG{+w}{ }\PYG{p}{\PYGZcb{});}
+
+\PYG{+w}{    }\PYG{k}{try}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{tag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{findNodeHandle}\PYG{p}{(}\PYG{n+nx}{viewRef}\PYG{p}{.}\PYG{n+nx}{current}\PYG{p}{);}
+\PYG{+w}{      }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n+nx}{tag}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{throw}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+ne}{Error}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}View ref not found\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{uri}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{capturedPhoto}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{captureRef}\PYG{p}{(}\PYG{n+nx}{tag}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{format}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}png\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{quality}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{+w}{ }\PYG{p}{\PYGZcb{}));}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{color}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{PixelColor}\PYG{p}{.}\PYG{n+nx}{getHex}\PYG{p}{(}\PYG{n+nx}{uri}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{y}\PYG{+w}{ }\PYG{p}{\PYGZcb{});}
+\PYG{+w}{      }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{placeAtPointRef}\PYG{p}{.}\PYG{n+nx}{current}\PYG{o}{?}\PYG{p}{.(}\PYG{n+nx}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{y}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{color}\PYG{p}{);}
+
+\PYG{+w}{      }\PYG{n+nx}{setSelectedColor}\PYG{p}{(}\PYG{n+nx}{color}\PYG{p}{);}
+\PYG{+w}{      }\PYG{n+nx}{setStatus}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Color selected\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{catch}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{err}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{warn}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Pixel read error:\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{err}\PYG{p}{);}
+\PYG{+w}{      }\PYG{n+nx}{setStatus}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Pixel read failed\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\end{MintedVerbatim}

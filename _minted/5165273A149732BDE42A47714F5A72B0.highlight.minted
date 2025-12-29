@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZlt{}}\PYG{n+nx}{NavigationContainer}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{      }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{RootStack}\PYG{+w}{ }\PYG{o}{/\PYGZgt{}}
+\PYG{o}{\PYGZlt{}}\PYG{err}{/NavigationContainer\PYGZgt{}}
+\end{MintedVerbatim}

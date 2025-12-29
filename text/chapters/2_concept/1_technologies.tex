@@ -1,6 +1,10 @@
 \section{Technologie}
+Cílem této sekce je výběr technologií pro úspěšný vývoj aplikace. V první části budou přiblíženy rozdíly multiplatformního a 
+nativního vývoje, následně dojde k porovnání vhodných frameworků a odůvodnění finální volby technologie pro implementaci aplikace.
+
 % react native, Viro AR, Expo
 \subsection{Nativní vs multiplatformní vývoj}
+Následující přehled shrnuje základní rozdíly mezi nativním a multiplatformním vývojem mobilních aplikací dle~\cite{argo22_nativni_vs_multiplatformni}.
 Nativní aplikace jsou vyvíjeny pro konkrétní platformu, typicky pro iOS od firmy Apple či Google Android. V závislosti na
 zvolené platformě je volen také specifický programovací jazyk. Pro iOS lze využít například Objective-C či Swift, pro Android je
 využívána Java či Kotlin.
@@ -19,7 +23,7 @@ Avšak i multiplatformní vývoj musí čelit různým problémům. Mezi nevýho
 nižší výkon u graficky náročných aplikací.
 
 V této bakalářské práci je vyvíjena multiplatformní aplikace. Hlavními důvody jsou větší možnosti testování i rozšiřitelnosti a velikost prostoru pro design. Aplikace taktéž
-vyžaduje přístup pouze k těm nativním funkcím, které jsou jednoduše přístupné na obou platformách, což výrazně ulehčuje její vývoj.~\cite{argo22_nativni_vs_multiplatformni}
+vyžaduje přístup pouze k těm nativním funkcím, které jsou jednoduše přístupné na obou platformách, což výrazně ulehčuje její vývoj.
 
 \subsection{Vývojové prostředí}
 Při vývoji multiplatformní aplikace, tedy aplikace dostupné pro systémy iOS i Android, případně také pro desktopové aplikace, je možné
@@ -60,6 +64,6 @@ Pro vývoj této bakalářské práce je využit framework React Native, a to na
 a rozšířený, což usnadňuje celkový vývoj aplikace. Dalším důvodem je podpora knihoven rozšířené reality a rychlé projevení změn při psaní kódu.
 
 \subsection{Expo}
-Pro zjednodušení celkovéhop procesu vývoje je využit framework Expo, jenž je definován jako sada nástrojů a služeb postavených na React Native. Slouží
+Pro zjednodušení celkového procesu vývoje je využit framework Expo, jenž je definován jako sada nástrojů a služeb postavených na React Native. Slouží
 k usnadnění pracovních postupů a poskytuje prostor vývojářům soustředit se na psaní samotného kódu bez nutnosti soustředit se na nastavení konfigurací a nativních nástrojů~\cite{sarwar_react_native_with_expo}.
 Expo slouží jako mezikrok mezi samotným vývojem v React Native a následným sestavením aplikace v Xcode.
