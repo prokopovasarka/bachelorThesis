@@ -1,0 +1,33 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n+nx}{describe}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}RGB to CMYK Conversion\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{it}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}converts pure cyan \PYGZsh{}00FFFF to CMYK with C=100\PYGZpc{}\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{result}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{renderHook}\PYG{p}{(()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{useColorData}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}00FFFF\PYGZsq{}}\PYG{p}{));}
+\PYG{+w}{      }\PYG{n+nx}{expect}\PYG{p}{(}\PYG{n+nx}{result}\PYG{p}{.}\PYG{n+nx}{current}\PYG{p}{.}\PYG{n+nx}{cmykCode}\PYG{p}{).}\PYG{n+nx}{toBe}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}C: 100\PYGZpc{}, M: 0\PYGZpc{}, Y: 0\PYGZpc{}, K: 0\PYGZpc{}\PYGZsq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+
+\PYG{+w}{    }\PYG{n+nx}{it}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}converts pure magenta \PYGZsh{}FF00FF to CMYK with M=100\PYGZpc{}\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{result}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{renderHook}\PYG{p}{(()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{useColorData}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}FF00FF\PYGZsq{}}\PYG{p}{));}
+\PYG{+w}{      }\PYG{n+nx}{expect}\PYG{p}{(}\PYG{n+nx}{result}\PYG{p}{.}\PYG{n+nx}{current}\PYG{p}{.}\PYG{n+nx}{cmykCode}\PYG{p}{).}\PYG{n+nx}{toBe}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}C: 0\PYGZpc{}, M: 100\PYGZpc{}, Y: 0\PYGZpc{}, K: 0\PYGZpc{}\PYGZsq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+
+\PYG{+w}{    }\PYG{n+nx}{it}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}converts pure yellow \PYGZsh{}FFFF00 to CMYK with Y=100\PYGZpc{}\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{result}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{renderHook}\PYG{p}{(()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{useColorData}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}FFFF00\PYGZsq{}}\PYG{p}{));}
+\PYG{+w}{      }\PYG{n+nx}{expect}\PYG{p}{(}\PYG{n+nx}{result}\PYG{p}{.}\PYG{n+nx}{current}\PYG{p}{.}\PYG{n+nx}{cmykCode}\PYG{p}{).}\PYG{n+nx}{toBe}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}C: 0\PYGZpc{}, M: 0\PYGZpc{}, Y: 100\PYGZpc{}, K: 0\PYGZpc{}\PYGZsq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+
+\PYG{+w}{    }\PYG{n+nx}{it}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}converts black \PYGZsh{}000000 to CMYK with K=100\PYGZpc{}\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{result}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{renderHook}\PYG{p}{(()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{useColorData}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}000000\PYGZsq{}}\PYG{p}{));}
+\PYG{+w}{      }\PYG{n+nx}{expect}\PYG{p}{(}\PYG{n+nx}{result}\PYG{p}{.}\PYG{n+nx}{current}\PYG{p}{.}\PYG{n+nx}{cmykCode}\PYG{p}{).}\PYG{n+nx}{toBe}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}C: 0\PYGZpc{}, M: 0\PYGZpc{}, Y: 0\PYGZpc{}, K: 100\PYGZpc{}\PYGZsq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+
+\PYG{+w}{    }\PYG{n+nx}{it}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}converts white \PYGZsh{}FFFFFF to CMYK with all 0\PYGZpc{}\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{result}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{renderHook}\PYG{p}{(()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{useColorData}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}FFFFFF\PYGZsq{}}\PYG{p}{));}
+\PYG{+w}{      }\PYG{n+nx}{expect}\PYG{p}{(}\PYG{n+nx}{result}\PYG{p}{.}\PYG{n+nx}{current}\PYG{p}{.}\PYG{n+nx}{cmykCode}\PYG{p}{).}\PYG{n+nx}{toBe}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}C: 0\PYGZpc{}, M: 0\PYGZpc{}, Y: 0\PYGZpc{}, K: 0\PYGZpc{}\PYGZsq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+
+\PYG{+w}{    }\PYG{n+nx}{it}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}formats CMYK string correctly\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{result}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{renderHook}\PYG{p}{(()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{useColorData}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}FF5733\PYGZsq{}}\PYG{p}{));}
+\PYG{+w}{      }\PYG{n+nx}{expect}\PYG{p}{(}\PYG{n+nx}{result}\PYG{p}{.}\PYG{n+nx}{current}\PYG{p}{.}\PYG{n+nx}{cmykCode}\PYG{p}{).}\PYG{n+nx}{toMatch}\PYG{p}{(}\PYG{l+s+sr}{/\PYGZca{}C: \PYGZbs{}d+\PYGZpc{}, M: \PYGZbs{}d+\PYGZpc{}, Y: \PYGZbs{}d+\PYGZpc{}, K: \PYGZbs{}d+\PYGZpc{}\PYGZdl{}/}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{});}
+\end{MintedVerbatim}

@@ -53,7 +53,7 @@ index překračující povolenou hodnotu a další. V takových případech je �
 Následuje ukázka unit testů vyvíjeného software pro uzavření sekce o unit testování. 
 Následující unit test zjišťuje, zda je pro poskytnuté barvy správně proveden převod z RGB do CMYK.
 
-\begin{lstlisting}
+\begin{minted}[breaklines]{js}
     describe('RGB to CMYK Conversion', () => {
     it('converts pure cyan #00FFFF to CMYK with C=100%', () => {
       const { result } = renderHook(() => useColorData('#00FFFF'));
@@ -85,7 +85,7 @@ Následující unit test zjišťuje, zda je pro poskytnuté barvy správně prov
       expect(result.current.cmykCode).toMatch(/^C: \d+%, M: \d+%, Y: \d+%, K: \d+%$/);
     });
   });
-\end{lstlisting}
+\end{minted}
 
 V druhé ukázce je proveden test správného zobrazení textu. Jelikož na obrazovce s detailem barvy barva pozadí 
 odpovídá vybranému odstínu, je třeba uvažovat kontrast s textem. Proto na světlém pozadí text a ohraničení palet je černé, 
