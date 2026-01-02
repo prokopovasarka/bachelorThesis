@@ -1,10 +1,10 @@
-\section{Architektura}
+\section{Architektura a architektonické vzory}
 % component-based architektura
 Pro návrh struktury systému a specifikaci interakcí mezi jednotlivými částmi je nutné zvolit správnou
-architekturu. Ta nám usnadní vývoj a škálovatelnost, zároveň určuje komplexitu našeho projektu. 
-Architekturu vybereme na základě požadavků a výběru technologií vhodných pro náš projekt.
+architekturu a architektonický vzor. Ta nám usnadní vývoj a škálovatelnost, zároveň určuje komplexitu našeho projektu. 
+Architekturu spolu s architektonickým vzorem vybereme na základě požadavků a výběru technologií vhodných pro náš projekt.
 
-Kapitola se zaměřuje na popis známých architektur a návrhových vzorů využívaných pro vývoj multiplatformních
+Kapitola se zaměřuje na popis známých návrhových vzorů využívaných pro vývoj multiplatformních
 aplikací včetně jejich způsobu komunikace. Následně budou shrnuty jejich výhody a nevýhody. V závěru proběhne porovnání
 těchto návrhových vzorů včetně určení nejvhodnějšího výběru pro aplikaci v této práci.
 
@@ -50,17 +50,17 @@ logiku zároveň. Je možné spojení s dalšími službami či úložišti zaji
 
 
 \subsection{Component-based}
-Komponentová architektura je založená na opakovaně využitelných částech aplikace, kde každá komponenta má definovanou funkcionalitu, jenž
+Component-based je založená na opakovaně využitelných částech aplikace, kde každá komponenta má definovanou funkcionalitu, jenž
 je vložena do aplikace bez úpravy ostatních komponent. Dle zdroje~\cite{mendix_component_based_architecture} si lze komponentu představit jako kostku lega.
 
 Při stavbě struktury z kostek lega, v tomto případě aplikace, lze vybírat z různých tvarů, velikostí a barev, které představují její komponenty. Každá
 kostka má přitom své určení, například dveře, různé konstrukční prvky či okna. Ty lze dle jejich vlastností propojit s ostatními bloky, jejich přídání či 
 odebrání má přitom minimální dopad na strukturu. Vývoj aplikací je sice náročnější proces, avšak i v případě kompikovanějších programů je tato analogie popisující
-koncept Component-base architektury relevantní.
+koncept Component-based vzoru relevantní.
 
-\subsection{Výhody a nevýhody zmíněných architektur}
-Po stručném popsání jednotlivých architektur a návrhových vzorů je třeba před závěrečným výběrem shrnout si
-jejich výhody a nevýhody. Nejprve následuje popis \textbf{výhod} plynoucích z využívání jednotlivých architektur.
+\subsection{Výhody a nevýhody zmíněných architektonických vzorů}
+Po stručném popsání jednotlivých návrhových vzorů je třeba před závěrečným výběrem shrnout si
+jejich výhody a nevýhody. Nejprve následuje popis \textbf{výhod} plynoucích z využívání jednotlivých vzorů.
 
 \paragraph{MVC}
 MVC umožňuje oddělení uživatelského rozhraní od dat. Tím usnadňuje změnu a další vývoj jednotlivých částí, aniž by 
@@ -82,23 +82,26 @@ Nevýhodou MVC je zásah obchodní logiky do UI a těžší implementace testů.
 moderních uživatelských rozhraní obtížné.~\cite{guru99_mvc_vs_mvvm}
 
 \paragraph{MVVM}
-Architektura MVVM není vhodná architektura pro projekty s jednoduchým UI vzhledem k jeho komplexnosti. Zároveň je náročné správně navrhnout ViewModel, což by 
+Vzor MVVM není vhodný pro projekty s jednoduchým UI vzhledem k jeho komplexnosti. Zároveň je náročné správně navrhnout ViewModel, což by 
 mohlo vyústit k vysokému počtu bloků s duplicitním kódem.~\cite{gossman2006advantages}
 
 \paragraph{Component-based}
-Vzhledem k vytváření oddělených komponent, Component-based architektura přidává do systému vyšší komplexitu. Každá její komponenta musí být přesně definována, 
+Vzhledem k vytváření oddělených komponent, Component-based přidává do systému vyšší komplexitu. Každá její komponenta musí být přesně definována, 
 vyvinuta a spravována, což může vyústit k složitým vzájemným závislostem. Pokud jsou zároveň různé komponenty vyvíjeny různými týmy či s rozdílnými technologiemi, může
 jejich integrace představovat další překážku.~\cite{sakovich2025componentbased}
 
-\subsection{Shrnutí a výběr architektury}
-Po shrnutí výhod a nevýhod všech zmíněných architektur jsme získali lepší obrázek o tom, jak každá funguje a k jakému účelu slouží. Nyní proto můžeme vybrat 
-architekturu nejvhodnější pro náš projekt.
+\subsection{Shrnutí a výběr architektury a architektonického vzoru}
+Po shrnutí výhod a nevýhod všech zmíněných vzorů jsme získali lepší obrázek o tom, jak každý z nich funguje a k jakému účelu slouží. Nyní proto můžeme vybrat 
+vzor nejvhodnější pro náš projekt. Z hlediska celkové architektury aplikace byla zvolena monolitická architektura, jelikož vyvíjený projekt svým rozsahem ani očekávaným zatížením nevyžaduje použití 
+distribuovaných architektur. Veškerá aplikační logika, vizualizační vrstva i práce s daty jsou realizovány přímo na straně klienta. Monolitický přístup umožňuje jednodušší 
+návrh, implementaci i nasazení aplikace a zároveň snižuje režii spojenou se správou komunikace mezi jednotlivými částmi systému. Pro účely této práce tak 
+představuje přehledné a efektivní řešení, které odpovídá charakteru vyvíjené aplikace.
 
 Náš projekt nedosahuje takových rozměrů, aby bylo vhodné pro něj využít vzor MVVM. Zároveň jeho obousměrný tok dat může v některých případech způsobit neočekávané vedlejší efekty. 
 Proto je třeba hledat jednodušší řešení a vyvarovat se těm, které by mohly způsobit nadbytečné komplikace.
 
-MVC je sice vhodný pro projekty se stejnými rozměry, jako má tato práce, avšak vhodnější volbou je Component-based architektura, a to z několika následujících důvodů. MVC často vyžaduje explicitní instrukce
-při změně modelu pro aktualizaci View, zároveň s růstem aplikace začíná být zajišťování závislostí a udržování oddělení částí mnohem náročnější. Component-based architektura je založena na dynamičnosti
+MVC je sice vhodný pro projekty se stejnými rozměry, jako má tato práce, avšak vhodnější volbou je Component-based, a to z několika následujících důvodů. MVC často vyžaduje explicitní instrukce
+při změně modelu pro aktualizaci View, zároveň s růstem aplikace začíná být zajišťování závislostí a udržování oddělení částí mnohem náročnější. Component-based je založena na dynamičnosti
 a její velkou výhodou, jak již bylo zmíněno v předchozí podsekci, je právě možnost rozšiřitelnosti s minimálním dopadem na celý systém.
-Dle~\cite{reactnative_components} je React Native založený na komponentách a kromě základních a nativních komponent existují i další, vytvořené komunitou. Můžeme 
-tedy říci, že pro zájmy této práce a v souladu se standardními postupy v softwarovém inženýrství byla vybrána správná architektura pro vyvíjenou aplikaci a můžeme pokračovat k poslední části návrhu.
+Dle~\cite{reactnative_components} je React Native založený na komponentách a kromě základních a nativních komponent existují i další, vytvořené komunitou. Je proto vhodná pro náš projekt a můžeme 
+říci, že pro zájmy této práce a v souladu se standardními postupy v softwarovém inženýrství byla vybrána správná architektura i architektonický vzor pro vyvíjenou aplikaci a můžeme pokračovat k poslední části návrhu.
