@@ -9,7 +9,7 @@ V následujících řádcích jsou prezentovány významné části implementace
 s ukázkami zdrojových kódů.
 
 Implementace se řídí architekturou stanovenou v návrhu a splňuje funkční i nefunkční požadavky uvedené při analýze. 
-Sekce je tedy dle využité Component-based architektury rozdělená na popis jednotlivých komponent důležitých pro fungování celé 
+Sekce je tedy dle využitého vzoru Component-based rozdělená na popis jednotlivých komponent důležitých pro fungování celé 
 aplikace.
 
 \subsection{App}
@@ -143,7 +143,7 @@ tvorbu materiálů a umístění informačního boxu s detekovanou barvou do pro
 \textbf{Hooks} v React Native jsou funkce, které nám zpřístupní nějakou funkcionalitu z React~\cite{itnetwork_usestate}. Tyto funkcionality jsou využívány
 v celém projektu a~velký význam mají právě v komponentě \texttt{SceneAR}. Využívá hook useEffect při \texttt{registerPlaceAtPoint}, kde je třeba najít bod umístění
 AR objektu do prostoru. V něm, jak je vidět v Ukázce \ref{fig:hit_test} níže, využívá hit test \texttt{performARHitTestWithPoint} vysílající paprsek dle souřadnic bodu pixelu v 2D scéně.
-Pokud je nalezení úspěšné nastaví se pozice objektů. V opačném případě je reportována chyba. Objekty jsou vytvářeny s \texttt{ViroMaterials}.
+Pokud je nalezení úspěšné, nastaví se pozice objektů. V opačném případě je reportována chyba. Objekty jsou vytvářeny s \texttt{ViroMaterials}.
 
 \begin{minted}[breaklines]{js}
      try {
@@ -203,9 +203,9 @@ převodu z HEX do CMYK. Nejprve dojde k separaci jednotlivých složek, následn
 Zároveň se díky funkci \texttt{getContrastTextColor}, která detekuje kontrast konkrétní barvy, mění ohraničení v paletách a text. Tak 
 je postaráno o čitelnost textu.
 
-Druhá část komponenty je určena pro tvorbu palet. Následující ukázka zobrazuje celý postup výpočtu monochromatické, analogické i komplementární 
-palety. U monochromatické palety byl zvolen offset, díky kterému je zajištěno při jasných či naopak velmi tmavých odstínech posun zajišťující, že paleta 
-nebude vyobrazovat pouze černé či pouze bílé odstíny. (Viz Ukázka \ref{fig:generating_palettes})
+Druhá část komponenty je určena pro tvorbu palet. Následující ukázka \ref{fig:generating_palettes} zobrazuje celý postup výpočtu monochromatické, analogické i komplementární 
+palety. U monochromatické palety byl zvolen offset, díky kterému je zajištěn při jasných či naopak velmi tmavých odstínech posun, aby paleta 
+nevyobrazila pouze černé či pouze bílé odstíny.
 
 \begin{minted}[breaklines]{js}
    OFFSET = 20
