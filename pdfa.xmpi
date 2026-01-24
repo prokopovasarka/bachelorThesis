@@ -64,7 +64,7 @@
    <dc:format>application/pdf</dc:format> 
    <dc:title><rdf:Alt><rdf:li xml:lang="x-default">Mobilní aplikace pro detekci barev a vizuální návrh barevných schémat</rdf:li></rdf:Alt></dc:title>
    <dc:creator><rdf:Seq><rdf:li>Šárka Prokopová</rdf:li></rdf:Seq></dc:creator>
-   <dc:rights><rdf:Alt><rdf:li xml:lang="x-default">© 2025 Šárka Prokopová</rdf:li></rdf:Alt></dc:rights>
+   <dc:rights><rdf:Alt><rdf:li xml:lang="x-default">© 2026 Šárka Prokopová</rdf:li></rdf:Alt></dc:rights>
    <dc:description><rdf:Alt><rdf:li xml:lang="x-default">Mobilní aplikace pro detekci barev a vizuální návrh barevných schémat (Bakalářská práce)</rdf:li></rdf:Alt></dc:description>
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:prism="http://prismstandard.org/namespaces/basic/2.2/"> 
@@ -77,17 +77,17 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"> 
    <xmp:CreatorTool>LaTeX with hyperref</xmp:CreatorTool> 
-   <xmp:ModifyDate>2026-01-05T13:00:17+01:00</xmp:ModifyDate> 
-   <xmp:CreateDate>2026-01-05T13:00:17+01:00</xmp:CreateDate> 
-   <xmp:MetadataDate>2026-01-05T13:00:17+01:00</xmp:MetadataDate> 
+   <xmp:ModifyDate>2026-01-24T20:31:28+01:00</xmp:ModifyDate> 
+   <xmp:CreateDate>2026-01-24T20:31:28+01:00</xmp:CreateDate> 
+   <xmp:MetadataDate>2026-01-24T20:31:28+01:00</xmp:MetadataDate> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpRights = "http://ns.adobe.com/xap/1.0/rights/"> 
    <xmpRights:Marked>True</xmpRights:Marked>
-   <xmpRights:UsageTerms><rdf:Alt><rdf:li xml:lang="x-default">© 2025 Šárka Prokopová</rdf:li></rdf:Alt></xmpRights:UsageTerms>
+   <xmpRights:UsageTerms><rdf:Alt><rdf:li xml:lang="x-default">© 2026 Šárka Prokopová</rdf:li></rdf:Alt></xmpRights:UsageTerms>
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"> 
    <xmpMM:DocumentID>uuid:96D67445-61F5-E364-BCF7-8EE24D7A47B8</xmpMM:DocumentID> 
-   <xmpMM:InstanceID>uuid:E6402310-ED4B-CDAE-7248-EF8E84FDA91F</xmpMM:InstanceID> 
+   <xmpMM:InstanceID>uuid:37FB2674-624D-4113-4CEF-4452266657BB</xmpMM:InstanceID> 
   </rdf:Description> 
  </rdf:RDF> 
 </x:xmpmeta> 
